@@ -3,6 +3,47 @@
 <meta charset="UTF-8" />
 <title>Sketcher</title>
 
+<!-- BECKHAM LIBS-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<!--script src="js/main.js"></script -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  
+<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+<link rel="stylesheet" href="css/aos.css">
+
+<link rel="stylesheet" href="css/ionicons.min.css">
+
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+<link rel="stylesheet" href="css/flaticon.css">
+<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+
 <!-- bs4 css -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
 	
@@ -32,68 +73,172 @@
 	
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="#"><h1>sketcher demo</h1></a>
-  </nav>
-<div class="container-fluid"> 
-  <!-- start my obertka-->
-<div>
-
-
-<blockquote class="blockquote text-justify" style="margin:30px;">
- <p> Sketcher is a simple tool that uses CNN to recognize drawings. 
- The CNN was trained to recognize 100 classes</a> using the quick draw <a href='https://github.com/googlecreativelab/quickdraw-dataset'> dataset</a>. It achieves 6% top 5 error. The accuracy could be improved
-although model is super lightweighted with around 1 million parameters. The table  will show the top 5 predictions. </p>
-    <footer class="blockquote-footer">ZAID ALYAFEAI</footer>
-  </blockquote>
-</div>
-
-<div class="row">
-  <div class="col" style ='margin-left:100px;'>
-<h4 id ='status' >Loading Model... </h4>	  
-<canvas id="canvas" width="300" height="300" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
-<div class="btn-group" style = 'margin-top:40px; '>
-<input type="range" min="5" max="20" value="10" class="slider" id="myRange" style ='margin-top:20px;'>
-<button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;' disabled>Clear</button>
-    </div>   
-</div>
-  <div class="col">
-    <section style="margin-top:120px">
-    <div class="pieID pie">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Art Intelligence</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       
-    </div>
-    <ul class="pieID legend">
-      <li>
-        <em id = "sym1"></em>
-        <span id = "prob1" ></span>
-      </li>
-      <li>
-        <em id = "sym2"></em>
-        <span id = "prob2"></span>
-      </li>
-      <li>
-        <em id = "sym3"></em>
-        <span id = "prob3"></span>
-      </li>
-      <li>
-        <em id = "sym4"></em>
-        <span id = "prob4"></span>
-      </li>
-      <li>
-        <em id = "sym5"></em>
-        <span id = "prob5"></span>
-      </li>
-    </ul>
-  </section>
-</div>
-</div>  
-</body>
-<script src="pie.js"></script>
-<script>
-	console.log('starting');
-	start('en')
-</script>
-</div>
+
+    </head>
+    <body>
+  
+      <div class="KW_progressContainer">
+        <div class="KW_progressBar">
+  
+        </div>
+      </div>
+      <div class="page">
+      <nav id="colorlib-main-nav" role="navigation">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+        <div class="js-fullheight colorlib-table">
+          <div class="img" style="background-image: url(images/ava.jpg);"></div>
+          <div class="colorlib-table-cell js-fullheight">
+            <div class="row no-gutters">
+              <div class="col-md-12 text-center">
+                <h1 class="mb-4"><a href="index.html" class="logo">Art Intelligence</a></h1>
+                <ul>
+                  <li><a href="index.html"><span><small>01</small>Main page</span></a></li>
+                  <li><a href="about.html"><span><small>02</small>Other projects</span></a></li>
+                  <li class="active"><a href="blog.html"><span><small>05</small>Sketch</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <div id="colorlib-page">
+        <header>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="colorlib-navbar-brand">
+                  <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/person_1.jpg);"></span>Beckham Muff</a>
+                </div>
+                <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+              </div>
+            </div>
+          </div>
+        </header>
+  
+        <section class="ftco-section">
+          <div class="container mt-5">
+            <div class="row justify-content-center mb-5 pb-5">
+              <div class="col-md-7 text-center heading-section ftco-animate">
+                <span>Demo Application</span>
+                <h2>sketcher</h2>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-8">
+                <h2 class="mb-3">History behind the scenes</h2>
+                <p>Sketcher is a simple tool that uses CNN to recognize drawings. 
+                  The CNN was trained to recognize 100 classes</a> using the quick draw <a href='https://github.com/googlecreativelab/quickdraw-dataset'> dataset</a>. It achieves 6% top 5 error. The accuracy could be improved
+                 although model is super lightweighted with around 1 million parameters. The table  will show the top 5 predictions. </p>
+                 </p>
+                <p>The more complex analysis of the topic you can check in my medium article</p>
+                <p>
+                  <img src="images/image_6.jpg" alt="" class="img-fluid">
+                </p>
+                <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+                <h2 class="mb-3 mt-5">Playground</h2>
+                <!-- insert sketcher index code -->
+                                
+                <div class="row">
+                  <div class="col" style ='margin-left:100px;'>
+                <h4 id ='status' >Loading Model... </h4>	  
+                <canvas id="canvas" width="300" height="300" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
+                <div class="btn-group" style = 'margin-top:40px; '>
+                <input type="range" min="5" max="20" value="10" class="slider" id="myRange" style ='margin-top:20px;'>
+                <button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;' disabled>Clear</button>
+                    </div>   
+                </div>
+                  <div class="col">
+                    <section style="margin-top:120px">
+                    <div class="pieID pie">
+                      
+                    </div>
+                    <ul class="pieID legend">
+                      <li>
+                        <em id = "sym1"></em>
+                        <span id = "prob1" ></span>
+                      </li>
+                      <li>
+                        <em id = "sym2"></em>
+                        <span id = "prob2"></span>
+                      </li>
+                      <li>
+                        <em id = "sym3"></em>
+                        <span id = "prob3"></span>
+                      </li>
+                      <li>
+                        <em id = "sym4"></em>
+                        <span id = "prob4"></span>
+                      </li>
+                      <li>
+                        <em id = "sym5"></em>
+                        <span id = "prob5"></span>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                </div>  
+                <script src="pie.js"></script>
+                <script>
+                  console.log('starting');
+                  start('en')
+                </script>
+
+
+                <div class="about-author d-flex pt-5">
+                  <div class="bio align-self-md-center mr-4">
+                    <img src="images/ava.jpg" alt="Image placeholder" class="img-fluid mb-4">
+                  </div>
+                  <div class="desc align-self-md-center">
+                    <h3>About The Author</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        
+        <footer class="ftco-footer ftco-bg-dark ftco-section">
+          <div class="container">
+            <div class="row mb-5 justify-content-center">
+              <div class="col-md-5 text-center">
+                <div class="ftco-footer-widget mb-5">
+                  <ul class="ftco-footer-social list-unstyled">
+                    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                    <li class="ftco-animate"><a href="#"><span class="icon-medium"></span></a></li>
+                    <li class="ftco-animate"><a href="#"><span class="icon-vk"></span></a></li>
+                  </ul>
+                </div>
+                <div class="ftco-footer-widget">
+                  <h2 class="mb-3">Contact Us</h2>
+                  <p class="h3 email"><a href="#">artinte7@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+  
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Art Intelligence. All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+  
+        <!-- loader -->
+        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  
+        </div>
+  
+      </div>
 
 </html>
