@@ -20,7 +20,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.753);
   z-index: 1;
   width: 100px;
   height: 100px;
