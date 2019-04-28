@@ -7,6 +7,10 @@ $(document).ready(function($) {
 
 	"use strict";
 
+  $('.your-class').slick({
+		setting-name: setting-value
+	});
+
 	$(window).stellar({
     responsive: false,
     parallaxBackgrounds: true,

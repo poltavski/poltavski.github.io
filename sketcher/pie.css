@@ -20,7 +20,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0);
   z-index: 1;
   width: 100px;
   height: 100px;
@@ -33,9 +33,9 @@
   display: block;
   width: 120px;
   height: 2px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.7);
   border-radius: 50%;
-  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 3px 4px rgba(255, 255, 255, 0.6);
   margin: 220px auto;
   
 }
