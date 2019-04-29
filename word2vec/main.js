@@ -63,3 +63,5 @@ function setup() {
       .then(result => addResults.html(result[0].word))
   });
 }
+
+setup();
