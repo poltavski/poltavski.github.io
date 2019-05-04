@@ -124,20 +124,8 @@
                   
                     <script>
                       document.getElementById('file-input').onchange = function (e) {
-                        var loadingImage = loadImage(
-                          e.target.files[0],
-                          function (img) {
-                            document.write(new Date().getFullYear());
-                            document.body.appendChild(img);
-                            setup();
-                          },
-                          {maxWidth: 600}
-                      );
-                        if (!loadingImage) {
-                          // Alternative code ...
-                          document.write(new Date().getFullYear());
-                          
-                      }
+                        preload();
+                        setup();
                       };
                     </script>                
                   <!-- end of your project code-->
