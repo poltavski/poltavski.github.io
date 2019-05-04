@@ -68,6 +68,7 @@
 <link rel="stylesheet" href="../css/flaticon.css">
 <link rel="stylesheet" href="../css/icomoon.css">
 <link rel="stylesheet" href="../css/style.css">
+<script src="../js/load-image.all.min.js"></script>
 
   </head>
 
@@ -102,7 +103,7 @@
                     </p>
                   <p>The more complex analysis of the topic you can check in my medium article</p>
                   <p>
-                  <img src="../images/pica.png" alt="" class="img-fluid">
+                  <img src="../images/classy.png" alt="" class="img-fluid">
                   </p>
                   <h2 class="mb-5 mt-7">Playground</h2>
                   <!-- insert sketcher index code -->
@@ -112,50 +113,22 @@
                       
 
                       <div class="col-sm-5 mt-5">
-                        <h3>Try it for yourself</h3>
-                            <input id="file-input" type="file" class="custom-file-input">
+                            <input type="file" id="file-input">
                             <label class="custom-file-label" for="file-input">Choose file</label>
+                      </div>
+                      <div>
+                        <script src="sketch.js"></script>
                       </div>
                   </div>
                   <!-- script src="sketch.js"></script -->
-                  <script src="../js/load-image.all.min.js"></script>
+                  
                     <script>
-                      // Initialize the Image Classifier method with MobileNet. A callback needs to be passed.
-                      let classifier;
-
-                      // A variable to hold the image we want to classify
-                      let img;
-
-                      function preload() {
-                        classifier = ml5.imageClassifier('MobileNet');
-                        img = loadImage('images/bird.jpg');
-                      }
-
-                      function setup() {
-                        createCanvas(400, 400);
-                        classifier.classify(img, gotResult);
-                        image(img, 0, 0);
-                      }
-
-                      // A function to run when we get any errors and the results
-                      function gotResult(error, results) {
-                        // Display error in the console
-                        if (error) {
-                          console.error(error);
-                        }
-                        // The results are in an array ordered by confidence.
-                        console.log(results);
-                        createDiv('Label: ' + results[0].label);
-                        createDiv('Confidence: ' + nf(results[0].confidence, 0, 2));
-                      }
-
                       document.getElementById('file-input').onchange = function (e) {
                         var loadingImage = loadImage(
                           e.target.files[0],
                           function (img) {
                             document.body.appendChild(img);
                             setup();
-
                           },
                           {maxWidth: 600}
                       );
@@ -164,7 +137,7 @@
                           document.write(new Date().getFullYear());
                           
                       }
-                    };
+                      };
                     </script>                
                   <!-- end of your project code-->
                   
@@ -216,7 +189,7 @@
           </div>
     
         </div>
-  <!-- END OF OFF-->
+    </div>
   
 </body>
 
