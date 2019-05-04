@@ -124,8 +124,16 @@
                   
                     <script>
                       document.getElementById('file-input').onchange = function (e) {
-                        setup();
+                        loadImage(
+                          e.target.files[0],
+                          function (img) {
+                              document.body.appendChild(img);
+                              setup(img);
+                          },
+                          {maxWidth: 600} // Options
+                        );
                       };
+                      
                     </script>                
                   <!-- end of your project code-->
                   
