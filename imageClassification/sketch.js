@@ -16,8 +16,10 @@ let classifier;
 let img;
 
 function preload() {
+  
   classifier = ml5.imageClassifier('MobileNet');
-  img = loadImage('images/bird.jpg');
+  var img_file = document.getElementById('file-input').files[0];
+  img = loadImage(img_file);
 }
 
 function setup() {
