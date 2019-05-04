@@ -23,17 +23,17 @@
       <h1>BS Custom File Input tests</h1>
 
       <div class="col-sm-12 mt-5">
-        <h3>Examples</h3>
+        <h3>Try it for yourself</h3>
         <div class="input-group mt-3">
           <div class="custom-file">
-            <input id="inputGroupFile01" type="file" class="custom-file-input">
-            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            <input id="file-input" type="file" class="custom-file-input">
+            <label class="custom-file-label" for="file-input">Choose file</label>
           </div>
         </div>
       </div>
   </div>
-  <script src="sketch.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js" type="text/javascript"></script>
+  <!-- script src="sketch.js"></script -->
+  <script src="../js/load-image.all.min.js"></script>
     <script>
       // Initialize the Image Classifier method with MobileNet. A callback needs to be passed.
       let classifier;
@@ -64,16 +64,20 @@
         createDiv('Confidence: ' + nf(results[0].confidence, 0, 2));
       }
 
+      document.getElementById('file-input').onchange = function (e) {
+        var loadingImage = loadImage(
+          e.target.files[0],
+          function (img) {
+            document.body.appendChild(img);
+            setup();
 
-      bsCustomFileInput.init()
-      var btn = document.getElementById('btnResetForm')
-      var form = document.querySelector('form')
-      btn.addEventListener('click', function () {
-        form.reset()
-      })
-      const selectedFile = document.getElementById('inputGroupFile01').files[0];
-      
-      setup(selectedFile, gotResult)
+          },
+          {maxWidth: 600}
+      );
+        if (!loadingImage) {
+          // Alternative code ...
+      }
+    };
     </script>
 </body>
 
