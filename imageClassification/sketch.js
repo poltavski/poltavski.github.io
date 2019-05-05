@@ -25,7 +25,7 @@ function handleFile(file) {
   print(file);
   if (file.type === 'image') {
     img = createImg(file.data);
-    imageReady;
+    imageReady();
   }
 }
 
@@ -45,7 +45,7 @@ function modelReady(){
 // When the image has been loaded,
 // get a prediction for that image
 function imageReady() {
-  classifier.predict(img, 5, gotResult);
+  classifier.predict(img, gotResult);
   // You can also specify the amount of classes you want
   // classifier.predict(img, 10, gotResult);
 }
