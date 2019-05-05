@@ -10,7 +10,7 @@ This example uses a callback pattern to create the classifier
 === */
 
 // Initialize the Image Classifier method with MobileNet. A callback needs to be passed.
-let classifier;
+const classifier = ml5.imageClassifier('MobileNet', modelReady);
 
 // A variable to hold the image we want to classify
 let img;
@@ -18,35 +18,44 @@ let input;
 
 function preload() {
   input = createFileInput(handleFile);
-  input.position(100, 600);
-  classifier = ml5.imageClassifier('MobileNet');
+  input.position(100, 1000);
 }
 
 function handleFile(file) {
   print(file);
   if (file.type === 'image') {
     img = createImg(file.data);
-    img.hide();
-  } else {
-    img = null;
+    imageReady;
   }
 }
 
-function setup() {
 
-  createCanvas(400, 400);
-  classifier.classify(img, gotResult);
-  image(img, 0, 0);
+function setup() {
+  noCanvas();
+  // Load the image
+  img = createImg('images/bird.jpg', imageReady);
+  img.size(400, 400);
+}
+
+// Change the status when the model loads.
+function modelReady(){
+  document.getElementById('status').html('Model Loaded')
+}
+
+// When the image has been loaded,
+// get a prediction for that image
+function imageReady() {
+  classifier.predict(img, 5, gotResult);
+  // You can also specify the amount of classes you want
+  // classifier.predict(img, 10, gotResult);
 }
 
 // A function to run when we get any errors and the results
-function gotResult(error, results) {
-  // Display error in the console
-  if (error) {
-    console.error(error);
+function gotResult(err, results) {
+  if (err) {
+    console.error(err);
   }
-  // The results are in an array ordered by confidence.
-  console.log(results);
-  createDiv('Label: ' + results[0].label);
-  createDiv('Confidence: ' + nf(results[0].confidence, 0, 2));
+  // The results are in an array ordered by probability.
+  select('#result').html(results[0].className);
+  select('#probability').html(nf(results[0].probability, 0, 2));
 }
