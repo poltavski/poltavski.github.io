@@ -18,7 +18,7 @@ let input;
 
 function preload() {
   input = createFileInput(handleFile);
-  input.position(0, 0);
+  input.position(100, 600);
   classifier = ml5.imageClassifier('MobileNet');
 }
 
