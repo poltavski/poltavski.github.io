@@ -14,14 +14,25 @@ let classifier;
 
 // A variable to hold the image we want to classify
 let img;
+let input;
 
 function preload() {
-  
+  input = createFileInput(handleFile);
+  input.position(0, 0);
   classifier = ml5.imageClassifier('MobileNet');
-  img = loadImage('images/bird.jpg');
 }
 
-function setup(img) {
+function handleFile(file) {
+  print(file);
+  if (file.type === 'image') {
+    img = createImg(file.data);
+    img.hide();
+  } else {
+    img = null;
+  }
+}
+
+function setup() {
 
   createCanvas(400, 400);
   classifier.classify(img, gotResult);
