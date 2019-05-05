@@ -5,57 +5,48 @@
 
 /* ===
 ml5 Example
-Image classification using MobileNet and p5.js
-This example uses a callback pattern to create the classifier
+Real time Object Detection using YOLO and p5.js
 === */
 
-// Initialize the Image Classifier method with MobileNet. A callback needs to be passed.
-const classifier = ml5.imageClassifier('MobileNet', modelReady);
-
-// A variable to hold the image we want to classify
-let img;
-let input;
-
-function preload() {
-  input = createFileInput(handleFile);
-  input.position(100, 1000);
-}
-
-function handleFile(file) {
-  print(file);
-  if (file.type === 'image') {
-    img = createImg(file.data);
-    imageReady();
-  }
-}
-
+let video;
+let yolo;
+let status;
+let objects = [];
 
 function setup() {
-  noCanvas();
-  // Load the image
-  img = createImg('images/bird.jpg', imageReady);
-  img.size(400, 400);
+  createCanvas(320, 240);
+  video = createCapture(VIDEO);
+  video.size(320, 240);
+
+  // Create a YOLO method
+  yolo = ml5.YOLO(video, startDetecting);
+
+  // Hide the original video
+  video.hide();
+  status = select('#status');
 }
 
-// Change the status when the model loads.
-function modelReady(){
-  document.getElementById('status').html('Model Loaded')
-}
-
-// When the image has been loaded,
-// get a prediction for that image
-function imageReady() {
-  classifier.predict(img, gotResult);
-  // You can also specify the amount of classes you want
-  // classifier.predict(img, 10, gotResult);
-}
-
-// A function to run when we get any errors and the results
-function gotResult(err, results) {
-  if (err) {
-    console.error(err);
+function draw() {
+  image(video, 0, 0, width, height);
+  for (let i = 0; i < objects.length; i++) {
+    noStroke();
+    fill(0, 255, 0);
+    text(objects[i].className, objects[i].x * width, objects[i].y * height - 5);
+    noFill();
+    strokeWeight(4);
+    stroke(0, 255, 0);
+    rect(objects[i].x * width, objects[i].y * height, objects[i].w * width, objects[i].h * height);
   }
-  // The results are in an array ordered by probability.
-  select('#result').html(results[0].className);
-  select('#probability').html(nf(results[0].probability, 0, 2));
+}
+
+function startDetecting() {
+  status.html('Model loaded!');
+  detect();
+}
+
+function detect() {
+  yolo.detect(function(err, results) {
+    objects = results;
+    detect();
+  });
 }
