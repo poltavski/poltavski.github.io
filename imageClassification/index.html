@@ -68,7 +68,6 @@
 <link rel="stylesheet" href="../css/flaticon.css">
 <link rel="stylesheet" href="../css/icomoon.css">
 <link rel="stylesheet" href="../css/style.css">
-<script src="../js/load-image.all.min.js"></script>
 
   </head>
 
@@ -110,31 +109,11 @@
                   
                   <div class="container mt-1">
                     <div class="row">
-                      
-
-                      <div class="col-sm-5 mt-5">
-                            <input type="file" id="file-input">
-                      </div>
                       <div>
                         <script src="sketch.js"></script>
-                        <div id="result"> </div>
                       </div>
                   </div>
-                  <!-- script src="sketch.js"></script -->
-                  
-                    <script>
-                      document.getElementById('file-input').onchange = function (e) {
-                        loadImage(
-                          e.target.files[0],
-                          function (img) {
-                              document.body.appendChild(img);
-                              setup(img);
-                          },
-                          {maxWidth: 600} // Options
-                        );
-                      };
-                      
-                    </script>                
+                          
                   <!-- end of your project code-->
                   
                   <div class="about-author d-flex pt-5">
