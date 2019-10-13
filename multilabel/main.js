@@ -1048,7 +1048,10 @@ let model;
 async function loadModel(name){
     // model=await tf.loadModel(`http://localhost:8081/${name}/model.json`);
     // model=await tf.loadLayersModel('mobilenet/model.json');
-    model = await tf.loadLayersModel('model/model.json');
+    // model = await tf.loadLayersModel('model/model.json');
+    const model = await tf.loadLayersModel(
+        'https://poltavski.github.io/multilabel/mn/model.json');
+    model.summary();
     $('.progress-bar').hide();
 }
 
