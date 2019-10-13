@@ -1,0 +1,10 @@
+healthy
+junk
+dessert
+appetizer
+mains
+soups
+carbs
+protein
+fats
+meat
