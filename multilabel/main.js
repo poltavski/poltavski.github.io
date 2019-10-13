@@ -1047,7 +1047,7 @@ $("#model-selector").change(function(){
 let model;
 async function loadModel(name){
     // model=await tf.loadModel(`http://localhost:8081/${name}/model.json`);
-    model=await tf.loadModelLayers('mobilenet/model.json');
+    model=await tf.loadLayersModel('mobilenet/model.json');
     // model = await tf.loadLayersModel('model/model.json');
     $('.progress-bar').hide();
 }
