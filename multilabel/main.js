@@ -304,11 +304,12 @@ $("#predict-button").click(async function(){
     top5.forEach(function(p){
         lab.push(p.className);
         ser.push(p.probability.toFixed(2)*100);
-
+    });
     top10.forEach(function(p){
         lab_rad.push(p.className);
         ser_rad.push(p.probability.toFixed(2)*100);
         // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
+    });
 });
 
 $("#predict-your").click(async function(){
@@ -341,11 +342,13 @@ $("#predict-your").click(async function(){
     top5.forEach(function(p){
         lab.push(p.className);
         ser.push(p.probability.toFixed(2)*100);
-    
+    });
     top10.forEach(function(p){
         lab_rad.push(p.className);
         ser_rad.push(p.probability.toFixed(2)*100);
+    });
 });
+
 
 
 var options = {
