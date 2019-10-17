@@ -80,42 +80,6 @@ $(document).ready()
 
 }
 
-// $('.slider').slick({
-//     dots: false,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//     arrows: true,
-//     responsive: [{
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 1
-//         }  
-//     },
-//     {
-//         breakpoint: 400,
-//         settings: {
-//             arrows: false,
-//             slidesToShow: 1,
-//             slidesToScroll: 1
-//         }
-//     }]
-// });
-
-// $(".slick-current" ).change(function(){
-// $(".slick-current")    
-    
-// $("button").change(function(){
-    
-// $(".slider-nav").on("beforeChange", function (){
-//     //change color here
-//     $(".slick-current" ).css( "border", "3px solid red" );
-
-// });
 $('.main').on('afterChange', function(event, slick, currentSlide, nextSlide){
     // debugger;
     $(".slick-slide").removeClass('works');
@@ -141,78 +105,6 @@ $("#image-selector").change(function(){
 
 
 
-// $("#model-selector").change(function(){
-// $(function(value){
-//     var input = $('.input'),
-//         bar = $('.bar'),
-//         bw = bar.width(),
-//         percent = bar.find('.percent'),
-//         circle = bar.find('.circle'),
-//         ps = percent.find('span'),
-//         cs = circle.find('span'),
-//         name = 'rotate';
-
-//     input.on('keydown', function (e) {
-//         if (e.keyCode == 13) {
-//             var t = $(this), val = t.val();
-//             if (val >= 0 && val <= 100) {
-//                 var w = 100 - val, pw = (bw * w) / 100,
-//                     pa = {
-//                         width: w + '%'
-//                     },
-//                     cw = (bw - pw) / 2,
-//                     ca = {
-//                         left: cw
-//                     }
-//                 ps.animate(pa);
-//                 cs.text(val + '%');
-//                 circle.animate(ca, function () {
-//                     circle.removeClass(name)
-//                 }).addClass(name);
-//             } else {
-//                 alert('range: 0 - 100');
-//                 t.val('');
-//             }
-//         }
-//     });
-//     //         
-//     var e = jQuery.Event("keydown");
-//     e.keyCode = e.which = 13; // # Some key code value
-//     $(input).trigger(e);
-// });  
-// function draw_bar(value, counter ){
-//     var bar = $(`.bar-${counter}`),
-//         bw = bar.width(),
-//         percent = bar.find(`.percent-${counter}`),
-//         circle = bar.find(`.circle-${counter}`),
-//         ps = percent.find(`span`),
-//         cs = circle.find(`span`),
-//         name = `rotate`;
-
-//      val = value;
-//         if (val >= 0 && val <= 100) {
-//             var w = 100 - val, pw = (bw * w) / 100,
-//                 pa = {
-//                         width: w + '%'
-//                 },
-//                 cw = (bw - pw) / 2,
-//                 ca = {
-//                         left: cw
-//                 }
-//             ps.animate(pa);
-//             cs.text(val + '%');
-//             circle.animate(ca, function () {
-//                 circle.removeClass(name)
-//             }).addClass(name);
-//         } else {
-//             alert('range: 0 - 100');
-//             t.val('');
-//         }
-// };
-    //         
-    
-// })
-
 let model;
 async function loadModel(){
     // model=await tf.loadLayersModel('mobilenet/model.json');
@@ -225,53 +117,7 @@ async function loadModel(){
 loadModel(); // $("#model-selector").val()
 $('.progress-bar').show();
 
-// function getBase64Image(img1) {
-//     var img = new Image();
-//     img.crossOrigin = 'Anonymous';
-//     img.src = img1.src;
-//     console.log(img);
-//     var canvas = document.createElement("canvas");
-//     canvas.width = img.width;
-//     canvas.height = img.height;
-//     var ctx = canvas.getContext("2d");
-//     ctx.drawImage(img, 0, 0);
-//     var dataURL = canvas.toDataURL("image/png");
-//     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-// };
-    // .load(function(){
 
-// function getBase64Image(img) {
-//   var canvas = document.createElement("canvas");
-//   canvas.crossOrigin = 'Anonymous';
-//   canvas.width = img.width;
-//   canvas.height = img.height;
-//   var ctx = canvas.getContext("2d");
-//   ctx.drawImage(img, 0, 0);
-//   var dataURL = canvas.toDataURL("image/png");
-//   return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-// }
-
-
-
-  
-// function getBase64Image(img) {
-//     // Create an empty canvas element
-//     var canvas = document.createElement("canvas");
-//     canvas.width = img.width;
-//     canvas.height = img.height;
-
-//     // Copy the image contents to the canvas
-//     var ctx = canvas.getContext("2d");
-//     ctx.drawImage(img, 0, 0);
-
-//     // Get the data-URL formatted image
-//     // Firefox supports PNG and JPEG. You could check img.src to
-//     // guess the original format, but be aware the using "image/jpg"
-//     // will re-encode the image.
-//     var dataURL = canvas.toDataURL("/media/artem/opt/code/multilabel/gallery/18_guacamole_hostedLargeUrl.jpg");
-
-//     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-// }
 var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
@@ -289,8 +135,6 @@ $("#predict-button").click(async function(){
         probability: p,
         className: FOOD_CLASSES[i]
     };
-    }).sort(function(a,b){
-        return b.probability-a.probability;
     });
 
     var lab = [];
@@ -299,17 +143,22 @@ $("#predict-button").click(async function(){
     var lab_rad = [];
     var ser_rad = [];
 
-    top5 = top10.slice(0,5);
-    // $("#prediction-list").empty();
-    top5.forEach(function(p){
-        lab.push(p.className);
-        ser.push(p.probability.toFixed(2)*100);
-    });
     top10.forEach(function(p){
         lab_rad.push(p.className);
         ser_rad.push(p.probability.toFixed(2)*100);
         // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
     });
+
+    top5 = top10.sort(function(a,b){
+        return b.probability-a.probability;
+    }).slice(0,5);
+
+    // $("#prediction-list").empty();
+    top5.forEach(function(p){
+        lab.push(p.className);
+        ser.push(p.probability.toFixed(2)*100);
+    });
+    
     var options = {
         chart: {
             width: 400,
@@ -417,25 +266,29 @@ $("#predict-your").click(async function(){
         probability: p,
         className: FOOD_CLASSES[i]
     };
-    }).sort(function(a,b){
-        return b.probability-a.probability;
     });
+
     var lab = [];
     var ser = [];
 
     var lab_rad = [];
     var ser_rad = [];
 
-    top5 = top10.slice(0,5);
+    top10.forEach(function(p){
+        lab_rad.push(p.className);
+        ser_rad.push(p.probability.toFixed(2)*100);
+    });
+
+    top5 = top10.sort(function(a,b){
+        return b.probability-a.probability;
+    }).slice(0,5);
+    
     // $("#prediction-list").empty();
     top5.forEach(function(p){
         lab.push(p.className);
         ser.push(p.probability.toFixed(2)*100);
     });
-    top10.forEach(function(p){
-        lab_rad.push(p.className);
-        ser_rad.push(p.probability.toFixed(2)*100);
-    });
+    
 
     var options = {
         chart: {
