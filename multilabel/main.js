@@ -27,7 +27,7 @@ $(document).ready()
    centerMode: true,
 //    adaptiveHeight: true,
    centerPadding: '40px',
-   slidesToShow: 4,
+   slidesToShow: 3,
    slidesToScroll: 1,
    asNavFor: '.slider-for',
    dots: true,
