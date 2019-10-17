@@ -180,35 +180,35 @@ $("#image-selector").change(function(){
 //     e.keyCode = e.which = 13; // # Some key code value
 //     $(input).trigger(e);
 // });  
-function draw_bar(value, counter ){
-    var bar = $(`.bar-${counter}`),
-        bw = bar.width(),
-        percent = bar.find(`.percent-${counter}`),
-        circle = bar.find(`.circle-${counter}`),
-        ps = percent.find(`span`),
-        cs = circle.find(`span`),
-        name = `rotate`;
+// function draw_bar(value, counter ){
+//     var bar = $(`.bar-${counter}`),
+//         bw = bar.width(),
+//         percent = bar.find(`.percent-${counter}`),
+//         circle = bar.find(`.circle-${counter}`),
+//         ps = percent.find(`span`),
+//         cs = circle.find(`span`),
+//         name = `rotate`;
 
-     val = value;
-        if (val >= 0 && val <= 100) {
-            var w = 100 - val, pw = (bw * w) / 100,
-                pa = {
-                        width: w + '%'
-                },
-                cw = (bw - pw) / 2,
-                ca = {
-                        left: cw
-                }
-            ps.animate(pa);
-            cs.text(val + '%');
-            circle.animate(ca, function () {
-                circle.removeClass(name)
-            }).addClass(name);
-        } else {
-            alert('range: 0 - 100');
-            t.val('');
-        }
-};
+//      val = value;
+//         if (val >= 0 && val <= 100) {
+//             var w = 100 - val, pw = (bw * w) / 100,
+//                 pa = {
+//                         width: w + '%'
+//                 },
+//                 cw = (bw - pw) / 2,
+//                 ca = {
+//                         left: cw
+//                 }
+//             ps.animate(pa);
+//             cs.text(val + '%');
+//             circle.animate(ca, function () {
+//                 circle.removeClass(name)
+//             }).addClass(name);
+//         } else {
+//             alert('range: 0 - 100');
+//             t.val('');
+//         }
+// };
     //         
     
 // })
@@ -272,33 +272,17 @@ $('.progress-bar').show();
 
 //     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 // }
-
+var counter = 0;
 $("#predict-button").click(async function(){
+    counter +=3;
+    $(".predictions").prepend(`<h4>Image ${counter/3}</h2><div class="row text-center">
+    <div class="col-4" id="chart-${counter-2}"></div>
+    <div class="col-4" id="chart-${counter-1}"></div> 
+    <div class="col-4" id="chart-${counter}"></div>  
+</div>`)
     
-    // let image2 = $('#exp').get(0);
-    // let file = $("#image-selector").prop('files')[0];
-    // reader.readAsDataURL(image1);
-
-    // let image2 = getBase64Image(image1);
-    // var base64 = getBase64Image(document.getElementById("imageid"));
-
-    // var canvas = document.getElementById("canvas").getContext("2d");
-    // var button = document.getElementById("predict-button");
-    // var image = new Image();
-    // image.crossOrigin = "anonymous";  // This enables CORS
-    // image.onload = function (event) {
-    //     try {
-    //         canvas.drawImage(image, 0, 0, 200, 200);
-    //         button.download = "cat.png";
-    //         button.href = canvas.canvas.toDataURL();        
-    //     } catch (e) {
-    //         alert(e);
-    //     }
-    // };
-    // image.src = "https://github.com/poltavski/poltavski.github.io/blob/master/imageClassification/images/bird.jpg"
-
     let image1= ($('.works').find('.sl-img')).get(0);  
-    console.log(image1);
+    // console.log(image1);
     // console.log(image1.src)
     // var base64 = getBase64Image(image);
     // console.log("base go");
@@ -309,11 +293,11 @@ $("#predict-button").click(async function(){
     // img2 = image1.src
     // img2.innerHTML = image1.innerHTML;
     // console.log(image);
-    let tensor = preprocessImage(image1);
+    let tensor = preprocessImage(image);
     // let tensor1 = preprocessImage(image1);
 
     let prediction = await model.predict(tensor).data();
-    let top5=Array.from(prediction)
+    let top10=Array.from(prediction)
                 .map(function(p,i){
     return {
         probability: p,
@@ -321,38 +305,124 @@ $("#predict-button").click(async function(){
     };
     }).sort(function(a,b){
         return b.probability-a.probability;
-    }).slice(0,5);
+    });
     
 
-$("#prediction-list").empty();
-top5.forEach(function(p){
-    // counter +=1;
-    $(".chart").append(`<li><span class="bar" data-number="${p.className}"></span><span class="number">${p.probability.toFixed(2)*100}%</span></li>`);
-    // <li><span class="bar" data-number="38000"></span><span class="number">38,000</span></li>
-    // $("#exp").append(`<div class="bar-${counter}">${p.className}<div class="percent-${counter}"><span style="width: 100%;"></span></div><div class="circle-${counter}"><span>${p.probability.toFixed(2)*100}%</span></div></div>`);
-    // $("#exp").change(draw_bar(p.probability.toFixed(2)*100, counter));
  
-    $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
+var lab = [];
+var ser = [];
+
+var lab_rad = [];
+var ser_rad = [];
+
+top5 = top10.slice(0,5);
+// $("#prediction-list").empty();
+top5.forEach(function(p){
+    lab.push(p.className);
+    ser.push(p.probability.toFixed(2)*100);
+
+    // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
+});
+top10.forEach(function(p){
+    lab_rad.push(p.className);
+    ser_rad.push(p.probability.toFixed(2)*100);
+
+    // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
 });
 
-$('.chart').horizBarChart();
-// var counter = 0;
-// top5.forEach(function(p){
-//     counter +=1;
-//     <li><span class="bar" data-number="38000"></span><span class="number">38,000</span></li>
-//     $("#exp").append(`<div class="bar-${counter}">${p.className}<div class="percent-${counter}"><span style="width: 100%;"></span></div><div class="circle-${counter}"><span>${p.probability.toFixed(2)*100}%</span></div></div>`);
-//     $("#exp").change(draw_bar(p.probability.toFixed(2)*100, counter));
-//     // <div class="bar">
-//     //                             healthy
-//     //                             <div class="percent">
-//     //                                 <span style="width: 100%;"></span>
-//     //                             </div>
-//     //                             <div class="circle">
-//     //                                 <span>0%</span>
-//     //                             </div>
-//     //                         </div>
-//     $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
-// });
+
+var options = {
+    chart: {
+        width: 400,
+        type: 'donut',
+    },
+    labels: lab,
+    series: ser,
+    responsive: [{
+        breakpoint: 400,
+        options: {
+            chart: {
+                width: 200
+            },
+            legend: {
+                position: 'bottom'
+            }
+        }
+        
+    }],
+}
+
+var options_rad = {
+    chart: {
+        height: 350,
+        type: 'radar',
+    },
+    series: [{
+        name: 'Food classification',
+        data: ser_rad,
+    }],
+    responsive: [{
+        breakpoint: 400,
+        options: {
+            chart: {
+                width: 200
+            },
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }], 
+    title: {
+        text: 'Radar Food Chart'
+    },
+    labels: lab_rad
+}
+
+var options_bar = {
+    chart: {
+        height: 250,
+        type: 'bar',
+    },
+    plotOptions: {
+        bar: {
+            horizontal: true,
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    series: [{
+        data: ser
+    }],
+    xaxis: {
+        categories: lab,
+    }
+}
+
+
+
+var chart = new ApexCharts(
+    document.querySelector(`#chart-${counter-2}`),
+    options
+);
+
+chart.render();
+
+var chart_rad = new ApexCharts(
+    document.querySelector(`#chart-${counter-1}`),
+    options_rad
+);
+
+chart_rad.render();
+
+var chart_bar = new ApexCharts(
+    document.querySelector(`#chart-${counter}`),
+    options_bar
+);
+
+chart_bar.render();
+
+
 
 });
 
