@@ -310,6 +310,95 @@ $("#predict-button").click(async function(){
         ser_rad.push(p.probability.toFixed(2)*100);
         // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
     });
+    var options = {
+        chart: {
+            width: 400,
+            type: 'donut',
+        },
+        labels: lab,
+        series: ser,
+        responsive: [{
+            breakpoint: 400,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+            
+        }],
+    }
+
+    var options_rad = {
+        chart: {
+            height: 350,
+            type: 'radar',
+        },
+        series: [{
+            name: 'Food classification',
+            data: ser_rad,
+        }],
+        responsive: [{
+            breakpoint: 400,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }], 
+        title: {
+            text: 'Radar Food Chart'
+        },
+        labels: lab_rad
+    }
+
+    var options_bar = {
+        chart: {
+            height: 250,
+            type: 'bar',
+        },
+        plotOptions: {
+            bar: {
+                horizontal: true,
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        series: [{
+            data: ser
+        }],
+        xaxis: {
+            categories: lab,
+        }
+    }
+
+    var chart = new ApexCharts(
+        document.querySelector(`#chart-${counter-2}`),
+        options
+    );
+
+    chart.render();
+
+    var chart_rad = new ApexCharts(
+        document.querySelector(`#chart-${counter-1}`),
+        options_rad
+    );
+
+    chart_rad.render();
+
+    var chart_bar = new ApexCharts(
+        document.querySelector(`#chart-${counter}`),
+        options_bar
+    );
+
+    chart_bar.render();
+
 });
 
 $("#predict-your").click(async function(){
@@ -347,102 +436,95 @@ $("#predict-your").click(async function(){
         lab_rad.push(p.className);
         ser_rad.push(p.probability.toFixed(2)*100);
     });
-});
 
-
-
-var options = {
-    chart: {
-        width: 400,
-        type: 'donut',
-    },
-    labels: lab,
-    series: ser,
-    responsive: [{
-        breakpoint: 400,
-        options: {
-            chart: {
-                width: 200
-            },
-            legend: {
-                position: 'bottom'
+    var options = {
+        chart: {
+            width: 400,
+            type: 'donut',
+        },
+        labels: lab,
+        series: ser,
+        responsive: [{
+            breakpoint: 400,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
             }
-        }
-        
-    }],
-}
-
-var options_rad = {
-    chart: {
-        height: 350,
-        type: 'radar',
-    },
-    series: [{
-        name: 'Food classification',
-        data: ser_rad,
-    }],
-    responsive: [{
-        breakpoint: 400,
-        options: {
-            chart: {
-                width: 200
-            },
-            legend: {
-                position: 'bottom'
-            }
-        }
-    }], 
-    title: {
-        text: 'Radar Food Chart'
-    },
-    labels: lab_rad
-}
-
-var options_bar = {
-    chart: {
-        height: 250,
-        type: 'bar',
-    },
-    plotOptions: {
-        bar: {
-            horizontal: true,
-        }
-    },
-    dataLabels: {
-        enabled: false
-    },
-    series: [{
-        data: ser
-    }],
-    xaxis: {
-        categories: lab,
+            
+        }],
     }
-}
 
+    var options_rad = {
+        chart: {
+            height: 350,
+            type: 'radar',
+        },
+        series: [{
+            name: 'Food classification',
+            data: ser_rad,
+        }],
+        responsive: [{
+            breakpoint: 400,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }], 
+        title: {
+            text: 'Radar Food Chart'
+        },
+        labels: lab_rad
+    }
 
+    var options_bar = {
+        chart: {
+            height: 250,
+            type: 'bar',
+        },
+        plotOptions: {
+            bar: {
+                horizontal: true,
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        series: [{
+            data: ser
+        }],
+        xaxis: {
+            categories: lab,
+        }
+    }
 
-var chart = new ApexCharts(
-    document.querySelector(`#chart-${counter-2}`),
-    options
-);
+    var chart = new ApexCharts(
+        document.querySelector(`#chart-${counter-2}`),
+        options
+    );
 
-chart.render();
+    chart.render();
 
-var chart_rad = new ApexCharts(
-    document.querySelector(`#chart-${counter-1}`),
-    options_rad
-);
+    var chart_rad = new ApexCharts(
+        document.querySelector(`#chart-${counter-1}`),
+        options_rad
+    );
 
-chart_rad.render();
+    chart_rad.render();
 
-var chart_bar = new ApexCharts(
-    document.querySelector(`#chart-${counter}`),
-    options_bar
-);
+    var chart_bar = new ApexCharts(
+        document.querySelector(`#chart-${counter}`),
+        options_bar
+    );
 
-chart_bar.render();
-
-
+    chart_bar.render();
 
 });
 
