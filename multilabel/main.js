@@ -287,13 +287,13 @@ $("#predict-button").click(async function(){
     // var base64 = getBase64Image(image);
     // console.log("base go");
     // console.log(base64);
-    let image= $('#selected-image').get(0);
+    // let image= $('#selected-image').get(0);
     // var img2 = new Image();
     // img2.crossOrigin = 'Anonymous';
     // img2 = image1.src
     // img2.innerHTML = image1.innerHTML;
     // console.log(image);
-    let tensor = preprocessImage(image);
+    let tensor = preprocessImage(image1);
     // let tensor1 = preprocessImage(image1);
 
     let prediction = await model.predict(tensor).data();
@@ -306,6 +306,40 @@ $("#predict-button").click(async function(){
     }).sort(function(a,b){
         return b.probability-a.probability;
     });
+
+    $("#predict-your").click(async function(){
+        counter +=3;
+        $(".predictions").prepend(`<h4>Image ${counter/3}</h2><div class="row text-center">
+        <div class="col-4" id="chart-${counter-2}"></div>
+        <div class="col-4" id="chart-${counter-1}"></div> 
+        <div class="col-4" id="chart-${counter}"></div>  
+    </div>`)
+        
+        // let image1= ($('.works').find('.sl-img')).get(0);  
+        // console.log(image1);
+        // console.log(image1.src)
+        // var base64 = getBase64Image(image);
+        // console.log("base go");
+        // console.log(base64);
+        let image= $('#selected-image').get(0);
+        // var img2 = new Image();
+        // img2.crossOrigin = 'Anonymous';
+        // img2 = image1.src
+        // img2.innerHTML = image1.innerHTML;
+        // console.log(image);
+        let tensor = preprocessImage(image);
+        // let tensor1 = preprocessImage(image1);
+    
+        let prediction = await model.predict(tensor).data();
+        let top10=Array.from(prediction)
+                    .map(function(p,i){
+        return {
+            probability: p,
+            className: FOOD_CLASSES[i]
+        };
+        }).sort(function(a,b){
+            return b.probability-a.probability;
+        });
     
 
  
