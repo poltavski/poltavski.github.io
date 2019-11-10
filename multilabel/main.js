@@ -109,8 +109,14 @@ let model;
 async function loadModel(){
     // model=await tf.loadLayersModel('mobilenet/model.json');
     // model = await tf.loadLayersModel('model/model.json');
+<<<<<<< Updated upstream
     model = await tf.loadLayersModel('https://poltavski.github.io/multilabel/model/model.json');
     // model.summary();
+=======
+    model = await tf.loadLayersModel(
+        'https://poltavski.github.io/multilabel/mn/model.json');
+    model.summary();
+>>>>>>> Stashed changes
     $('.progress-bar').hide();
 }
 
