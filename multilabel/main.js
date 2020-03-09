@@ -127,7 +127,7 @@ var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
     $(".predictions").prepend(`
-    <h4>Image ${counter/3}</h2>
+<!--    <h4>Image ${counter/3}</h2>-->
     <div class="row text-center">
         <div class="col-4" id="chart-${counter-2}"></div>
         <div class="col-4" id="chart-${counter-1}"></div>
@@ -135,14 +135,14 @@ $("#predict-button").click(async function(){
     </div>`
     );
     let $itemBig = $('.owl-item.big > div').clone();
-    $('#cur-img').html($itemBig);
+
     let image1 = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
     // $('#cur-img').html(image1);
     // image1.crossOrigin = "Anonymous";
     // alert(image1);
     let tensor = preprocessImage(image1);
     let prediction = await model.predict(tensor).data();
-    alert(prediction);
+    // alert(prediction);
     let top10=Array.from(prediction)
         .map(function(p,i){
             return {
@@ -195,31 +195,6 @@ $("#predict-button").click(async function(){
         }],
     }
 
-    var options_rad = {
-        chart: {
-            height: 350,
-            type: 'radar',
-        },
-        series: [{
-            name: 'Food classification',
-            data: ser_rad,
-        }],
-        responsive: [{
-            breakpoint: 400,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }],
-        title: {
-            text: 'Radar Food Chart'
-        },
-        labels: lab_rad
-    }
 
     var options_bar = {
         chart: {
@@ -241,20 +216,14 @@ $("#predict-button").click(async function(){
             categories: lab,
         }
     }
+    $(`#chart-${counter-2}`).html($itemBig);
 
     var chart = new ApexCharts(
-        document.querySelector(`#chart-${counter-2}`),
+        document.querySelector(`#chart-${counter-1}`),
         options
     );
 
     chart.render();
-
-    var chart_rad = new ApexCharts(
-        document.querySelector(`#chart-${counter-1}`),
-        options_rad
-    );
-
-    chart_rad.render();
 
     var chart_bar = new ApexCharts(
         document.querySelector(`#chart-${counter}`),
