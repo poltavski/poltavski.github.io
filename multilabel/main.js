@@ -112,9 +112,9 @@ let model;
 async function loadModel(){
 
     // model=await tf.loadLayersModel('mobilenet/model.json');
-    model = await tf.loadLayersModel('model/model.json');
-    // model = await tf.loadLayersModel('https://poltavski.github.io/multilabel/model/model.json');
-    model.summary();
+    // model = await tf.loadLayersModel('model/model.json');
+    model = await tf.loadLayersModel('https://poltavski.github.io/multilabel/model/model.json');
+    // model.summary();
 
     // $('.progress-bar').hide();
 }
@@ -134,10 +134,11 @@ $("#predict-button").click(async function(){
     let $itemBig = $('.owl-item.big > div').clone();
     $('#cur-img').html($itemBig);
     let image1= ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
-    image1.crossOrigin = "Anonymous";
+    // image1.crossOrigin = "Anonymous";
     // alert(image1);
     let tensor = preprocessImage(image1);
     let prediction = await model.predict(tensor).data();
+    alert(prediction);
     let top10=Array.from(prediction)
         .map(function(p,i){
             return {
@@ -145,7 +146,7 @@ $("#predict-button").click(async function(){
                 className: FOOD_CLASSES[i]
             };
         });
-    alert(top10);
+    // alert(top10);
 
     var lab = [];
     var ser = [];
