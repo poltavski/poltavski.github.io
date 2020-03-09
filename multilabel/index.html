@@ -1,133 +1,601 @@
-<html>
-    <head>
-       <title>Predict with tensorflowJS</title> 
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-       <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-       <link rel="stylesheet" href="style.css"/>
-       <link rel="stylesheet" href="apexcharts.css" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Art Intelligence</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-       <style>
-        #chart {
-            max-width: 380px;
-            margin: 35px auto;
-        }
-        #chart-3 {
-            max-width: 350px;
-            margin: 35px auto;
-        }
-    </style>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:200italic,300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!--    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">-->
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="icon" href="https://img.icons8.com/metro/96/000000/brain.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
-    </head>
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
 
-    <body>
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
 
-        <main class="container">
-            <div class="row">
-                <!-- <div class="col-3"></div> -->
-                <div class="main col-md text-center">
-                    <div class="slider slider-nav vert_middle">
-                        <div class="cont works"><h4>chocolate ice cream</h4><img src="gallery/3_chocolate_ice_cream_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>hamburger</h4><img src="gallery/1_the_perfect_hamburger_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>basic french toast</h4><img src="gallery/9_basic_french_toast_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>steak tartare</h4><img src="gallery/20_steak_tartare_hostedLargeUrl.jpg"/></div>
-                        
-                        <div class="cont"><h4>chocolate ice cream</h4><img src="gallery/2_chocolate_ice_cream_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>guacamole</h4><img src="gallery/18_guacamole_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>back ribs</h4><img src="gallery/24_baby_back_ribs_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>teriyaki pork chops</h4><img src="gallery/12_teriyaki_pork_chops_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>blueberry cake donuts</h4><img src="gallery/34_glazed_blueberry_cake_donuts_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>salmon steak</h4><img src="gallery/23_salmon_steak_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>waffles</h4><img src="gallery/22_waffle_pizzas_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>steak</h4><img src="gallery/42_how_to_grill_the_perfect_steak_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>baklava</h4><img src="gallery/40_how_to_make_baklava_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>donuts</h4><img src="gallery/20_birthday_cake_donuts_hostedLargeUrl.jpg"/></div>
-                        <div class="cont"><h4>steak tartare</h4><img src="gallery/22_bistro_steak_tartare_at_home_hostedLargeUrl.jpg"/></div>
-                        
-                        <div class="cont"><h4>guacamole</h4><img src="gallery/12_guacamole_hostedLargeUrl.jpg"/></div>
-                    </div>
-                </div>
-                <div class="main col-md text-center">
-                    <div class="slider slider-for" >
-                        <div class="h-fix works"><h3>chocolate ice cream</h3><img class="sl-img" src="gallery/3_chocolate_ice_cream_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>hamburger</h3><img class="sl-img" src="gallery/1_the_perfect_hamburger_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>basic french toast</h3><img class="sl-img" src="gallery/9_basic_french_toast_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>steak tartare</h3><img class="sl-img" src="gallery/20_steak_tartare_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>chocolate ice cream</h3><img class="sl-img" src="gallery/2_chocolate_ice_cream_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>guacamole</h3><img class="sl-img" src="gallery/18_guacamole_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>back ribs</h3><img class="sl-img" src="gallery/24_baby_back_ribs_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>teriyaki pork chops</h3><img class="sl-img" src="gallery/12_teriyaki_pork_chops_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>blueberry cake donuts</h3><img class="sl-img" src="gallery/34_glazed_blueberry_cake_donuts_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>salmon steak</h3><img class="sl-img" src="gallery/23_salmon_steak_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>waffles</h3><img class="sl-img" src="gallery/22_waffle_pizzas_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>steak</h3><img class="sl-img" src="gallery/42_how_to_grill_the_perfect_steak_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>baklava</h3><img class="sl-img" src="gallery/40_how_to_make_baklava_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>donuts</h3><img class="sl-img" src="gallery/20_birthday_cake_donuts_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>steak tartare</h3><img class="sl-img" src="gallery/22_bistro_steak_tartare_at_home_hostedLargeUrl.jpg"/></div>
-                        <div class="h-fix"><h3>guacamole</h3><img class="sl-img" src="gallery/12_guacamole_hostedLargeUrl.jpg"/></div>
-                    </div>
-                </div>
-                    <div class="col-md">
-                    </div>
-            </div>
-            <div class="row">
-                    <div class="col-5">
-                            <button id="predict-button" class="btn btn-dark float-right">Predict image from gallery</button>
-                    </div>
-                    <div class="col-5">
-                            <button id="predict-your" class="btn btn-dark float-right">Predict your image</button>
-                    </div>
-                    <input id ="image-selector" class="form-control border-0" type="file"/>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="ml-3">Your Image</h2>
-                    <img id="selected-image" class="ml-3" src="">
-                </div>
-            </div>
-            <!-- <div class="row">
-                <div class="col">
-                    <h2 class="ml-3"Prediction></h2>
-                    <ol id="prediction-list"></ol>
-                </div>
-            </div> -->
-            <div class="predictions">
-                
-            </div>
-            <!-- <div class="row text-center">
-                 
-                <div class="col-4" id="chart-1"></div>
-                <div class="col-4" id="chart-2"></div> 
-                <div class="col-4" id="chart-3"></div>  
-            </div>
-            <div class="row text-center">
-                
-                <div class="col-4" id="chart-4"></div>
-                <div class="col-4" id="chart-5"></div> 
-                <div class="col-4" id="chart-6"></div>  
-            </div> -->
+    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div class="site-wrap"  id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+   
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-md-3 col-xl-4  d-block">
+            <h1 class="mb-0 site-logo"><a href="#home-section" class="text-black h2 mb-0">Art<span class="text-primary">Intelligence</span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-9 col-xl-8 main-menu">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
+                <li><a href="#features-section" class="nav-link">Stack</a></li>
+                <li><a href="#what-i-do" class="nav-link">Description</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+                <li><a href="#about-section" class="nav-link">Projects</a></li>
+                <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0" ><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+    
+
+    <div class="site-blocks-cover" style="overflow: hidden;">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+          <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
             
-        
+            <img width="800" src="../images/multilabel_cover_4.jpg" alt="Image" class="img-fluid img-absolute">
+
+            <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-lg-6 mr-auto">
+                <h1>To eat, or not to eat</h1>
+                <span class="sub-title d-block mb-3" class="mb-5">Multilabel food identification model, that runs from your device</span>
+
+                <br>
+                <p>Role: Lead developer. <br> All the rights of this project belong to <a href="https://broutonlab.com">BroutonLab</a></p>
+                <div>
+                  <a href="#what-i-do" class="btn btn-primary mr-2 mb-2">Show demo</a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>  
+
+
+    <div class="site-section" id="features-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
+          <div class="col-7 text-center  mb-5">
+            <h2 class="section-title">Stack</h2>
+            <p class="lead">*describe stack*</p>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
             
-            <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-code"></span></span>
+              </div>
+              <div>
+                <h3>Pandas library </h3>
+                <p> data cleaning & EDA</p>
+                </p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-book"></span></span>
+              </div>
+              <div>
+                <h3>Keras framework</h3>
+                <p> for building & training model</p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up"  data-aos-delay="200">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-star"></span></span>
+              </div>
+              <div>
+                <h3>TF Serving</h3>
+                <p> for model evaluation</p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-7 text-center  mb-5" id="what-i-do">
+      <h2 class="section-title">What I do </h2>
+    </div>
+    <div class="feature-big">
+      <div class="container">
+        <div class="row mb-5 site-section">
+          <div class="col-lg-7" data-aos="fade-right">
+            <img src="../images/undraw/undraw_email_capture_x8kv.svg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
+            <h2 class="text-black">Magnetic Data Gathering</h2>
+            <p class="mb-4">
+              Data has enormous impact on every decision because of its own value.
+              That's why we experienced at extracting web pages with auth using proxy.
+            </p>
+            <div class="author-box" data-aos="fade-left">
+              <div class="d-flex mb-4">
+                <div class="mr-3">
+                  <img src="../images/art_enhanced_crop.jpg" alt="Image" class="img-fluid rounded-circle">
+                </div>
+                <div class="mr-auto text-black">
+                  <strong class="font-weight-bold mb-0">Art Poltavskiy</strong> <br>
+                  Founder, Art Intelligence.
+                </div>
+              </div>
+              <blockquote>&rdquo;I extract High Quality, Accurate Data that you need and deliver it exactly as you like it.
+                Images, 3D Models, Dynamic web pages? Can be gathered, without a doubt&rdquo;</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 row mb-5 site-section ">
+          <div class="col-lg-7 order-1 order-lg-2" data-aos="fade-left">
+            <img src="../images/undraw/undraw_data_xmfy(1).svg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
+            <h2 class="text-black">Strong Exploratory Data Analysis </h2>
+            <p class="mb-4">The global data visualization market was valued at USD 4.51 billion in 2017,
+              and is expected to reach a value of USD 7.76 billion by 2023 at a CAGR of 9.47%
+              over the forecast period, according to a
+              <a href="https://www.absolutereports.com/enquiry/request-sample/13100636">study</a> </p>
             
-        </main>
-                
+            
+
+            <div class="author-box" data-aos="fade-right">
+              <div class="d-flex mb-4">
+                <div class="mr-3">
+                  <img src="../images/art_enhanced_crop.jpg" alt="Image" class="img-fluid rounded-circle">
+                </div>
+                <div class="mr-auto text-black">
+                  <strong class="font-weight-bold mb-0">Art Poltavskiy</strong> <br>
+                  Founder, Art Intelligence.
+                </div>
+              </div>
+              <blockquote>&ldquo;Strong visual part of your idea is a must. I work with dry numbers to make a rich story.
+                Python seaborn, streamlit, plotly - upon Dash or custom Flask application at your service
+                &rdquo;</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5 site-section">
+          <div class="col-lg-7" data-aos="fade-right">
+            <img src="../images/undraw/undraw_sentiment_analysis_jp6w.svg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
+            <h2 class="text-black">Vivid Computer Vision</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque nisi architecto autem molestias corrupti officia veniam.</p>
+            
+            <div class="author-box" data-aos="fade-left">
+              <div class="d-flex mb-4">
+                <div class="mr-3">
+                  <img src="../images/art_enhanced_crop.jpg" alt="Image" class="img-fluid rounded-circle">
+                </div>
+                <div class="mr-auto text-black">
+                  <strong class="font-weight-bold mb-0">Art Poltavskiy</strong> <br>
+                  Founder, Art Intelligence.
+                </div>
+              </div>
+              <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vitae ipsa asperiores inventore aperiam iure?&rdquo;</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 row mb-5 site-section ">
+          <div class="col-lg-7 order-1 order-lg-2" data-aos="fade-left">
+            <img src="../images/undraw/undraw_speech_to_text_9uir.svg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
+            <h2 class="text-black">Distinct Natural Language Processing</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque nisi architecto autem molestias corrupti officia veniam</p>
+            
+            
+
+            <div class="author-box" data-aos="fade-right">
+              <div class="d-flex mb-4">
+                <div class="mr-3">
+                  <img src="../images/art_enhanced_crop.jpg" alt="Image" class="img-fluid rounded-circle">
+                </div>
+                <div class="mr-auto text-black">
+                  <strong class="font-weight-bold mb-0">Art Poltavskiy</strong> <br>
+                  Founder, Art Intelligence.
+                </div>
+              </div>
+              <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vitae ipsa asperiores inventore aperiam iure?&rdquo;</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- -->
+    <div class="site-section testimonial-wrap" id="demo">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Demo Application</h2>
+          </div>
+        </div>
+      </div>
+      <div class="slide-three-item home-slider owl-carousel">
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/3_chocolate_ice_cream_hostedLargeUrl.jpg"/><div class="image-container">chocolate ice cream</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/1_the_perfect_hamburger_hostedLargeUrl.jpg"/><div class="image-container">hamburger</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/9_basic_french_toast_hostedLargeUrl.jpg"/><div class="image-container">basic french toast</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/20_steak_tartare_hostedLargeUrl.jpg"/><div class="image-container">steak tartare</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/2_chocolate_ice_cream_hostedLargeUrl.jpg"/><div class="image-container">chocolate ice cream</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/18_guacamole_hostedLargeUrl.jpg"/><div class="image-container">guacamole</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/24_baby_back_ribs_hostedLargeUrl.jpg"/><div class="image-container">back ribs</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/12_teriyaki_pork_chops_hostedLargeUrl.jpg"/><div class="image-container">teriyaki pork chops</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/34_glazed_blueberry_cake_donuts_hostedLargeUrl.jpg"/><div class="image-container">blueberry cake donuts</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/23_salmon_steak_hostedLargeUrl.jpg"/><div class="image-container">salmon steak</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/22_waffle_pizzas_hostedLargeUrl.jpg"/><div class="image-container">waffles</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/42_how_to_grill_the_perfect_steak_hostedLargeUrl.jpg"/><div class="image-container">steak</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/40_how_to_make_baklava_hostedLargeUrl.jpg"/><div class="image-container">baklava</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/20_birthday_cake_donuts_hostedLargeUrl.jpg"/><div class="image-container">donuts</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/22_bistro_steak_tartare_at_home_hostedLargeUrl.jpg"/><div class="image-container">steak tartare</div></div></div>
+        <div style="margin:8px"><div class="testimonial polaroid"><img src="gallery/12_guacamole_hostedLargeUrl.jpg"/><div class="image-container">guacamole</div></div></div>
+
+<!--        <div style="margin:8px">-->
+<!--          <div >-->
+<!--            <img class="demo-image" src="../images/multi_6.jpg" alt="Image">-->
+<!--            <div class="image-container"><strong>John Smith1</strong></div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div style="margin:8px">-->
+<!--          <div class="testimonial polaroid">-->
+<!--            <img class="demo-image" src="../images/multi_5.jpg" alt="Image">-->
+<!--            <div class="image-container"><strong>John Smith2</strong></div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div style="margin:8px">-->
+<!--          <div class="testimonial polaroid">-->
+<!--            <img class="demo-image" src="../images/multi_4.jpg" alt="Image">-->
+<!--            <div class="image-container"><strong>John Smith3</strong></div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div style="margin:8px">-->
+<!--          <div class="testimonial polaroid">-->
+<!--            <img class="demo-image" src="../images/multi_3.jpg" alt="Image">-->
+<!--            <div class="image-container"><strong>John Smith</strong></div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div style="margin:8px">-->
+<!--          <div class="testimonial polaroid">-->
+<!--            <img class="demo-image" src="../images/multi_2.jpg" alt="Image">-->
+<!--            <div class="image-container"><strong>John Smith</strong></div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div style="margin:8px">-->
+<!--          <div class="testimonial polaroid">-->
+<!--            <img class="demo-image" src="../images/multi_1.jpg" alt="Image">-->
+<!--            <div class="image-container"><strong>John Smith</strong></div>-->
+<!--          </div>-->
+<!--        </div>-->
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="section-title mb-3">Results</h2>
+          <button class="btn btn-primary mr-2 mb-2" id="predict-button"></button>
+          <div id="cur-img"></div>
+          <div class="predictions">
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!--      <div>-->
+<!--        <div class="row">-->
+<!--          <input id ="image-selector" class="form-control border-0" type="file">-->
+<!--        </div>-->
+
+<!--        <div class="col-6">-->
+<!--          <button id="predict-button" class="btn btn-dark float-right">Predict</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <div class="col">-->
+<!--          <h2 class="ml-3"Prediction></h2>-->
+<!--          <ol id="prediction-list"></ol>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <div class="col-12">-->
+<!--          <h2 class="ml-3">Image</h2>-->
+<!--          <img id="selected-image" class="ml-3" src="">-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+
+    </div>
+
+    <div class="site-section" id="our-team-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
+          <div class="col-7 text-center  mb-5">
+            <h2 class="section-title">Projects & competencies</h2>
+            <p class="lead"><strong>Recent highlights</strong></p>
+          </div>
+        </div>
+       
+        <div class="row">
+
+<!--          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">-->
+<!--            <div class="person">-->
+<!--              <div class="bio-img">-->
+<!--                <figure>-->
+<!--                  <img src="images/multilabel2.jpg" alt="Image" class="img-fluid">-->
+<!--                </figure>-->
+<!--                <div class="social">-->
+<!--                  <a href="https://poltavski.github.io/multilabel"><span>Show Demo</span></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <h2 class="text-black h1">Multi-label food identification</h2>-->
+<!--              <span class="sub-title d-block mb-3">Light model that predicts multiple classes by food you provide</span>-->
+<!--              <p><strong>Keras <a href="https://ai.googleblog.com/2018/04/mobilenetv2-next-generation-of-on.html">MobileNetV2</a>-->
+<!--                network trained on custom dataset and delievered to run from your device locally by TF Serving.</strong></p>-->
+<!--              </div>-->
+<!--          </div>-->
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="person">
+              <div class="bio-img">
+                <figure>
+                  <img src="../images/alpr-resize.gif" alt="Image" class="img-fluid">
+                </figure>
+                <div class="social">
+                  <a href="https://poltavski.github.io/multilabel"><span>Learn more</span></a>
+                </div>
+              </div>
+              <h2 class="text-black h1">Smart Vehicle Analyse System</h2>
+              <span class="sub-title d-block mb-3">Combination of neural networks for recognizing main vehicle properties</span>
+              <p><strong>System predicts license plate, brand and model, color and orientation with 94% accuracy on public *name* dataset and beats OpenALPR</strong></p>
+              <p>Role: Lead developer. <br> All the rights of this project belong to <a href="https://broutonlab.com">BroutonLab</a></p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="person">
+              <div class="bio-img">
+                <figure>
+                  <img src="../images/itbook.jpg" alt="Image" class="img-fluid">
+                </figure>
+                <div class="social">
+                  <a href="https://poltavski.github.io/multilabel"><span>Learn more</span></a>
+                </div>
+              </div>
+              <h2 class="text-black h1">Interactive Task Book</h2>
+              <span class="sub-title d-block mb-3">NLP with spacy</span>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section" id="blog-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Blog Posts</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
+              <img src="../images/img_1.jpg" alt="Image" class="img-fluid">
+              <h2><a href="#">Make Your Business More Profitable</a></h2>
+              <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+              <p><a href="#">Continue Reading...</a></p>
+            </div> 
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
+              <img src="../images/img_2.jpg" alt="Image" class="img-fluid">
+              <h2><a href="#">Make Your Business More Profitable</a></h2>
+              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+              <p><a href="#">Continue Reading...</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
+              <img src="../images/img_3.jpg" alt="Image" class="img-fluid">
+              <h2><a href="#">Make Your Business More Profitable</a></h2>
+              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+              <p><a href="#">Continue Reading...</a></p>
+            </div> 
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-image2 overlay" id="contact-section" style="background-image: url('../images/hero_1.jpg');">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3 text-white">Contact Us</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-7 mb-5">
+
+            
+
+            <form action="#" class="p-5 bg-white">
               
+              <h2 class="h4 text-black mb-5">Contact Form</h2> 
 
-        <!-- TensorFlow.js script -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script> -->
-        <script src="https://unpkg.com/@tensorflow/tfjs@1.2.8/dist/tf.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="jquery.horizBarChart.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
-        <!-- <script src="https//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"> </script> -->
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control rounded-0">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control rounded-0">
+                </div>
+              </div>
 
-        <!-- <script src="imagenet_classes.js"></script> -->
-        <script src="main.js"></script>
+              <div class="row form-group">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label> 
+                  <input type="email" id="email" class="form-control rounded-0">
+                </div>
+              </div>
 
-    </body>
+              <div class="row form-group">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label> 
+                  <input type="subject" id="subject" class="form-control rounded-0">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label> 
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="Leave your message here..."></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary mr-2 mb-2">
+                </div>
+              </div>
+
+  
+            </form>
+          </div>
+        
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="footer py-5 text-center">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12">
+            <p class="mb-0">
+              <a href="#" class="p-3"><span class="icon-facebook"></span></a>
+              <a href="#" class="p-3"><span class="icon-twitter"></span></a>
+              <a href="#" class="p-3"><span class="icon-instagram"></span></a>
+              <a href="#" class="p-3"><span class="icon-linkedin"></span></a>
+              <a href="#" class="p-3"><span class="icon-pinterest"></span></a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="mb-0">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- .site-wrap -->
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.countdown.min.js"></script>
+  <script src="../js/bootstrap-datepicker.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.fancybox.min.js"></script>
+  <script src="../js/jquery.sticky.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+  <script src="https://unpkg.com/@tensorflow/tfjs@1.2.8/dist/tf.min.js"></script>
+  <script src="main.js"></script>
+
+
+  <script src="../js/main.js"></script>
+  
+  </body>
 </html>
