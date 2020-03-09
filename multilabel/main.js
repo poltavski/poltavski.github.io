@@ -102,10 +102,10 @@ $("#image-selector").change(function(){
     reader.readAsDataURL(file);
 });
 
-var script = document.createElement("script");
-script.type = 'text/javascript';
-script.src = 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest';
-document.head.appendChild(script);
+// var script = document.createElement("script");
+// script.type = 'text/javascript';
+// script.src = 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest';
+// document.head.appendChild(script);
 
 
 let model;
@@ -126,14 +126,18 @@ loadModel(); // $("#model-selector").val()
 var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
-    $(".predictions").prepend(`<h4>Image ${counter/3}</h2><div class="row text-center">
-    <div class="col-4" id="chart-${counter-2}"></div>
-    <div class="col-4" id="chart-${counter-1}"></div>
-//     <div class="col-4" id="chart-${counter}"></div>
-</div>`);
+    $(".predictions").prepend(`
+    <h4>Image ${counter/3}</h2>
+    <div class="row text-center">
+        <div class="col-4" id="chart-${counter-2}"></div>
+        <div class="col-4" id="chart-${counter-1}"></div>
+        <div class="col-4" id="chart-${counter}"></div>
+    </div>`
+    );
     let $itemBig = $('.owl-item.big > div').clone();
     $('#cur-img').html($itemBig);
-    let image1= ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
+    let image1 = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
+    // $('#cur-img').html(image1);
     // image1.crossOrigin = "Anonymous";
     // alert(image1);
     let tensor = preprocessImage(image1);
