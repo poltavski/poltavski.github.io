@@ -233,6 +233,11 @@ div.polaroid {
   margin-bottom: 10px;
 }
 
+alpr {
+    !important max-width: 600px;
+    !important max-height: 400px;
+}
+
 .handwritten{
   font-family: "Indie Flower";
 }
