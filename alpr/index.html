@@ -92,13 +92,13 @@
 
             <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
               <div class="col-lg-6 mr-auto">
-                <h1>To eat, or not to eat</h1>
-                <span class="sub-title d-block mb-3" class="mb-5">Multilabel food identification model, that runs from your device</span>
+                <h1>Real time vehicle analysis system</h1>
+                <span class="sub-title d-block mb-3" class="mb-5">Combination of trained CNN models and computer vision techniques to analyze vehicles and recognize license plates with support for regional standards</span>
 
                 <br>
                 <p>Role: Lead developer. <br> All the rights of this project belong to <a href="https://broutonlab.com">BroutonLab</a></p>
                 <div>
-                  <a href="#demo" class="btn btn-primary mr-2 mb-2">Show demo</a>
+                  <a href="#demo" class="btn btn-primary mr-2 mb-2">Show benchmarks</a>
                 </div>
 
               </div>
@@ -126,8 +126,8 @@
                 <span class="icon-wrap"><span class="text-primary icon-code"></span></span>
               </div>
               <div>
-                <h3>Pandas library </h3>
-                <p> data cleaning & EDA</p>
+                <h3>Computer vision and math techniques</h3>
+                <p></p>
                 </p>
                 <p><a href="#">Learn More</a></p>
               </div>
@@ -141,7 +141,7 @@
                 <span class="icon-wrap"><span class="text-primary icon-book"></span></span>
               </div>
               <div>
-                <h3>Keras framework</h3>
+                <h3>Keras & Tensorflow models</h3>
                 <p> for building & training model</p>
                 <p><a href="#">Learn More</a></p>
               </div>
@@ -153,7 +153,7 @@
                 <span class="icon-wrap"><span class="text-primary icon-star"></span></span>
               </div>
               <div>
-                <h3>TF Serving</h3>
+                <h3>powered by C++ and Python</h3>
                 <p> for model evaluation</p>
                 <p><a href="#">Learn More</a></p>
               </div>
@@ -182,23 +182,23 @@ Such a model is extremely useful for Content-Based Retrieval
 -->
     <div class="feature-big">
       <div class="container">
-        <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
-          <span class="col-7 text-center  mb-5">
-            <h2 class="section-title">From your story </h2>
-            <h3 class="handwritten">
-              Imagine real life application of Multi Label Classification.
-              Given a food item, you would like to identify possible tags for the image.
-            For instance, given an image of a <span style="color:royalblue">cake</span>,
-            you expect neural network to provide tags such as  <span style="color:forestgreen">“carbs”</span> and  <span style="color:forestgreen">“dessert”</span>
-            </h3>
-          </span>
-        </div>
+<!--        <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">-->
+<!--          <span class="col-7 text-center  mb-5">-->
+<!--            <h2 class="section-title">From your story </h2>-->
+<!--            <h3 class="handwritten">-->
+<!--              Imagine real life application of Multi Label Classification.-->
+<!--              Given a food item, you would like to identify possible tags for the image.-->
+<!--            For instance, given an image of a <span style="color:royalblue">cake</span>,-->
+<!--            you expect neural network to provide tags such as  <span style="color:forestgreen">“carbs”</span> and  <span style="color:forestgreen">“dessert”</span>-->
+<!--            </h3>-->
+<!--          </span>-->
+<!--        </div>-->
         <div class="row mb-5 site-section">
           <div class="col-lg-7" data-aos="fade-right">
             <img src="../images/multilabel_story_2.jpg" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
-            <h2 class="text-black">To success one</h2>
+            <h2 class="text-black">We read license plates with 94% accuracy. And it’s fast.</h2>
             <div class="author-box" data-aos="fade-left">
               <div class="d-flex mb-4">
                 <div class="mr-3">
@@ -209,11 +209,12 @@ Such a model is extremely useful for Content-Based Retrieval
                   Founder, Art Intelligence.
                 </div>
               </div>
-              <blockquote>Such a model is extremely useful for Content-Based Retrieval
-                for businesses based on the food industry.
-                For instance, you can create an automated dietary planar
-                app based on the requirements of the user and retrieve
-                relevant images and recipes for the appropriate food items</blockquote>
+              <blockquote>
+                We perfectly balanced our final model between speed and accuracy,
+                so it beats scientific papers results. Our model is trained on more than half
+                a million images from all over the world. Small, 2-liners, shady or blurry license plates?
+                Can be recognized, without a doubt
+              </blockquote>
             </div>
           </div>
         </div>
@@ -224,12 +225,12 @@ Such a model is extremely useful for Content-Based Retrieval
           </div>
 
           <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
-            <h2 class="text-black">Multi-class vs Multi-label image classification</h2>
+            <h2 class="text-black">Fake it till you make it</h2>
             <p class="mb-4">
-              The task of predicting what an image represents is called image classification.
-              An image classification model is trained to recognize various classes of images.
-              In multi-class classification, one data sample can belong to only one class.
-              Where in multi-label classification, one data sample can belong to multiple classes (labels)
+              In the absence of a sufficient number of marked-up datasets that meet the requirements
+              of training the plate number recognition model, it was decided to generate a synthetic dataset.
+              With augmentations, such as rotation, blurring and darkening,
+              as well as various sizes and colorings of the license plate, font style, and distance between characters
             </p>
 
           </div>
@@ -240,11 +241,17 @@ Such a model is extremely useful for Content-Based Retrieval
             <img src="../images/multilabel_story_6.png" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
-            <h2 class="text-black">Transfer Learning</h2>
+            <h2 class="text-black">Pseudo-labeling</h2>
             <p class="mb-4">
-              Transfer learning is a popular method in computer vision that allows building accurate models in a timesaving wayю
-              Instead of starting the learning process from zero, you get patterns that have been learned solving a different problem.
-              In computer vision, transfer learning is usually expressed through the use of pre-trained models
+              We have about half a million images with plate numbers. Although we have the exact number,
+              we didn’t had bounding boxes around the characters to use that in training process.
+              To solve these type of problems, we used semi-supervised learning pseudo-labelling technique,
+              which is used both labelled data and unlabelled data. We managed to evaluate our models
+              on unlabelled data, and for those images, where pseudo-labelling was correct
+              (about 60-90% depending on the difficulty of the dataset) we collect them for further training.
+              In this manner, we’ve moved out from generated 300k generated dataset with tuning them
+              by 5 thousand real images, to more than 400k real annotated data for training
+
             </p>
           </div>
         </div>
@@ -254,20 +261,21 @@ Such a model is extremely useful for Content-Based Retrieval
             <img src="../images/multilabel_story_7.png" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
-            <h2 class="text-black">Training & testing cycle</h2>
+            <h2 class="text-black">We implement Night mode. When only a license plate is enough</h2>
             <p class="mb-4">
-              experiments was carried out with all kinds of resnets, mobilenets, and even nasnets,
-              but the final pick for further development was a lightweight mobilenetv2 and NASNetMobile
-              with accurate Xception and InceptionResNetV2 models fitting for every usage scenario
-              from lightweight mobile version, to extremely accurate cloud solution
+              Our algorithms can recognize license plates even without a car. And they don’t detect timestamps
+              on video or random objects with text allowing you to get the most important information in hard conditions
             </p>
           </div>
         </div>
         <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
           <span class="col-7 text-center  mb-5">
-            <h2 class="section-title">Metrics</h2>
+            <h2 class="section-title">We analyze vehicles from top to the bottom</h2>
 
-            <p>Accuracy is a must for every solutio</p>
+            <p>
+              Our end-to-end approach of the Neural Networks predicts color, direction,
+              brand and even model of the analyzing vehicle.
+            </p>
           </span>
         </div>
         <div class="col-lg-12 order-1 order-lg-2" data-aos="fade-right">
@@ -281,7 +289,9 @@ Such a model is extremely useful for Content-Based Retrieval
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Demo Application</h2>
+            <h2 class="section-title mb-3">We don’t choose nice looking recognitions.
+            </h2>
+            Here all the benchmarks we tested our solution on. Jump in to obtain and validate results.
           </div>
         </div>
       </div>
