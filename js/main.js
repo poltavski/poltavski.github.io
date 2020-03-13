@@ -161,13 +161,13 @@ jQuery(document).ready(function($) {
 		}
 
 		$('.slide-one-item').owlCarousel({
-	    center: false,
+	    center: true,
 	    items: 1,
 	    loop: true,
 			stagePadding: 0,
 	    margin: 0,
 	    smartSpeed: 1000,
-	    autoHeight: true,
+	    autoHeight: false,
 	    autoplay: true,
 	    pauseOnHover: false,
 	    nav: true,
