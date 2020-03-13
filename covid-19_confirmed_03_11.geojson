@@ -1,0 +1,3245 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 112.2707,30.9756 ]
+    },
+    "properties": {
+    "Province/State":"Hubei",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T10:53:02",
+    "Confirmed":67773,
+    "Deaths":3046,
+    "Recovered":49134
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 12.0000,43.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Italy",
+    "Last Update":"2020-03-11T21:33:02",
+    "Confirmed":12462,
+    "Deaths":827,
+    "Recovered":1045
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 53.0000,32.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Iran",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":9000,
+    "Deaths":354,
+    "Recovered":2959
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 128.0000,36.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Korea, South",
+    "Last Update":"2020-03-11T21:13:18",
+    "Confirmed":7755,
+    "Deaths":60,
+    "Recovered":288
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 2.2137,46.2276 ]
+    },
+    "properties": {
+    "Province/State":"France",
+    "Country/Region":"France",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":2281,
+    "Deaths":48,
+    "Recovered":12
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -4.0000,40.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Spain",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":2277,
+    "Deaths":54,
+    "Recovered":183
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.0000,51.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Germany",
+    "Last Update":"2020-03-11T19:13:17",
+    "Confirmed":1908,
+    "Deaths":3,
+    "Recovered":25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 113.4244,23.3417 ]
+    },
+    "properties": {
+    "Province/State":"Guangdong",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T10:13:06",
+    "Confirmed":1356,
+    "Deaths":8,
+    "Recovered":1282
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 113.6140,33.8820 ]
+    },
+    "properties": {
+    "Province/State":"Henan",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T08:13:09",
+    "Confirmed":1273,
+    "Deaths":22,
+    "Recovered":1249
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 120.0934,29.1832 ]
+    },
+    "properties": {
+    "Province/State":"Zhejiang",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":1215,
+    "Deaths":1,
+    "Recovered":1195
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 111.7088,27.6104 ]
+    },
+    "properties": {
+    "Province/State":"Hunan",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":1018,
+    "Deaths":4,
+    "Recovered":995
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 117.2264,31.8257 ]
+    },
+    "properties": {
+    "Province/State":"Anhui",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":990,
+    "Deaths":6,
+    "Recovered":984
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 115.7221,27.6140 ]
+    },
+    "properties": {
+    "Province/State":"Jiangxi",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":935,
+    "Deaths":1,
+    "Recovered":932
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 118.1498,36.3427 ]
+    },
+    "properties": {
+    "Province/State":"Shandong",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T11:33:07",
+    "Confirmed":760,
+    "Deaths":6,
+    "Recovered":726
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 139.6380,35.4437 ]
+    },
+    "properties": {
+    "Province/State":"Diamond Princess",
+    "Country/Region":"Cruise Ship",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":696,
+    "Deaths":7,
+    "Recovered":325
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.2275,46.8182 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Switzerland",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":652,
+    "Deaths":4,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 138.0000,36.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Japan",
+    "Last Update":"2020-03-11T21:33:03",
+    "Confirmed":639,
+    "Deaths":15,
+    "Recovered":118
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 119.4550,32.9711 ]
+    },
+    "properties": {
+    "Province/State":"Jiangsu",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":631,
+    "Deaths":0,
+    "Recovered":627
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.4689,60.4720 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Norway",
+    "Last Update":"2020-03-11T19:33:02",
+    "Confirmed":598,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 107.8740,30.0572 ]
+    },
+    "properties": {
+    "Province/State":"Chongqing",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T23:13:05",
+    "Confirmed":576,
+    "Deaths":6,
+    "Recovered":554
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 102.7103,30.6171 ]
+    },
+    "properties": {
+    "Province/State":"Sichuan",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T14:33:03",
+    "Confirmed":539,
+    "Deaths":3,
+    "Recovered":488
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.2913,52.1326 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Netherlands",
+    "Last Update":"2020-03-11T14:13:11",
+    "Confirmed":503,
+    "Deaths":5,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 16.0000,63.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Sweden",
+    "Last Update":"2020-03-11T19:33:02",
+    "Confirmed":500,
+    "Deaths":1,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.7615,47.8620 ]
+    },
+    "properties": {
+    "Province/State":"Heilongjiang",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T11:33:07",
+    "Confirmed":482,
+    "Deaths":13,
+    "Recovered":436
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -3.4360,55.3781 ]
+    },
+    "properties": {
+    "Province/State":"UK",
+    "Country/Region":"United Kingdom",
+    "Last Update":"2020-03-11T21:33:03",
+    "Confirmed":456,
+    "Deaths":8,
+    "Recovered":18
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.5018,56.2639 ]
+    },
+    "properties": {
+    "Province/State":"Denmark",
+    "Country/Region":"Denmark",
+    "Last Update":"2020-03-11T22:13:13",
+    "Confirmed":442,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 116.4142,40.1824 ]
+    },
+    "properties": {
+    "Province/State":"Beijing",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":435,
+    "Deaths":8,
+    "Recovered":326
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.4905,47.4009 ]
+    },
+    "properties": {
+    "Province/State":"Washington",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:33:03",
+    "Confirmed":366,
+    "Deaths":29,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4491,31.2020 ]
+    },
+    "properties": {
+    "Province/State":"Shanghai",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T03:13:07",
+    "Confirmed":344,
+    "Deaths":3,
+    "Recovered":320
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 116.1306,39.5490 ]
+    },
+    "properties": {
+    "Province/State":"Hebei",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":318,
+    "Deaths":6,
+    "Recovered":307
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.0000,50.8333 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Belgium",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":314,
+    "Deaths":3,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 117.9874,26.0789 ]
+    },
+    "properties": {
+    "Province/State":"Fujian",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":296,
+    "Deaths":1,
+    "Recovered":295
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 51.1839,25.3548 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Qatar",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":262,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 108.7881,23.8298 ]
+    },
+    "properties": {
+    "Province/State":"Guangxi",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T11:33:07",
+    "Confirmed":252,
+    "Deaths":2,
+    "Recovered":238
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.5501,47.5162 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Austria",
+    "Last Update":"2020-03-11T22:33:03",
+    "Confirmed":246,
+    "Deaths":0,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 108.8701,35.1917 ]
+    },
+    "properties": {
+    "Province/State":"Shaanxi",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":245,
+    "Deaths":1,
+    "Recovered":232
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.9481,42.1657 ]
+    },
+    "properties": {
+    "Province/State":"New York",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":220,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 50.5500,26.0275 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Bahrain",
+    "Last Update":"2020-03-11T22:33:03",
+    "Confirmed":195,
+    "Deaths":0,
+    "Recovered":35
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8333,1.2833 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Singapore",
+    "Last Update":"2020-03-11T13:53:24",
+    "Confirmed":178,
+    "Deaths":0,
+    "Recovered":96
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.6816,36.1162 ]
+    },
+    "properties": {
+    "Province/State":"California",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T23:53:03",
+    "Confirmed":177,
+    "Deaths":3,
+    "Recovered":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 101.4870,24.9740 ]
+    },
+    "properties": {
+    "Province/State":"Yunnan",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":174,
+    "Deaths":2,
+    "Recovered":170
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 109.7453,19.1959 ]
+    },
+    "properties": {
+    "Province/State":"Hainan",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":168,
+    "Deaths":6,
+    "Recovered":159
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 112.5000,2.5000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Malaysia",
+    "Last Update":"2020-03-11T11:33:08",
+    "Confirmed":149,
+    "Deaths":0,
+    "Recovered":26
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 106.8748,26.8154 ]
+    },
+    "properties": {
+    "Province/State":"Guizhou",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:33:03",
+    "Confirmed":146,
+    "Deaths":2,
+    "Recovered":133
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 117.3230,39.3054 ]
+    },
+    "properties": {
+    "Province/State":"Tianjin",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":136,
+    "Deaths":3,
+    "Recovered":131
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 112.2922,37.5777 ]
+    },
+    "properties": {
+    "Province/State":"Shanxi",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":133,
+    "Deaths":0,
+    "Recovered":131
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 101.0583,37.8099 ]
+    },
+    "properties": {
+    "Province/State":"Gansu",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T14:33:03",
+    "Confirmed":127,
+    "Deaths":2,
+    "Recovered":88
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 114.2000,22.3000 ]
+    },
+    "properties": {
+    "Province/State":"Hong Kong",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":126,
+    "Deaths":3,
+    "Recovered":65
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 122.6085,41.2956 ]
+    },
+    "properties": {
+    "Province/State":"Liaoning",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":125,
+    "Deaths":1,
+    "Recovered":111
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.0000,31.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Israel",
+    "Last Update":"2020-03-11T21:13:18",
+    "Confirmed":109,
+    "Deaths":0,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.8243,39.0742 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Greece",
+    "Last Update":"2020-03-11T23:53:02",
+    "Confirmed":99,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.5301,42.2302 ]
+    },
+    "properties": {
+    "Province/State":"Massachusetts",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":95,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.1923,43.6661 ]
+    },
+    "properties": {
+    "Province/State":"Jilin",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":93,
+    "Deaths":1,
+    "Recovered":91
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 15.4730,49.8175 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Czechia",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":91,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -19.0208,64.9631 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Iceland",
+    "Last Update":"2020-03-11T13:53:24",
+    "Confirmed":85,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.2401,41.1129 ]
+    },
+    "properties": {
+    "Province/State":"Xinjiang",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":76,
+    "Deaths":3,
+    "Recovered":73
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 113.9448,44.0935 ]
+    },
+    "properties": {
+    "Province/State":"Inner Mongolia",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T03:53:03",
+    "Confirmed":75,
+    "Deaths":1,
+    "Recovered":71
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 106.1655,37.2692 ]
+    },
+    "properties": {
+    "Province/State":"Ningxia",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":75,
+    "Deaths":0,
+    "Recovered":72
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 53.8478,23.4241 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"United Arab Emirates",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":74,
+    "Deaths":0,
+    "Recovered":17
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 47.7500,29.5000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Kuwait",
+    "Last Update":"2020-03-11T09:53:03",
+    "Confirmed":72,
+    "Deaths":0,
+    "Recovered":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 44.0000,33.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Iraq",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":71,
+    "Deaths":7,
+    "Recovered":15
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 151.2093,-33.8688 ]
+    },
+    "properties": {
+    "Province/State":"New South Wales",
+    "Country/Region":"Australia",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":65,
+    "Deaths":2,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 78.0000,21.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"India",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":62,
+    "Deaths":1,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 12.4578,43.9424 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"San Marino",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":62,
+    "Deaths":2,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8623,33.8547 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Lebanon",
+    "Last Update":"2020-03-11T11:53:03",
+    "Confirmed":61,
+    "Deaths":3,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 30.0000,26.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Egypt",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":60,
+    "Deaths":1,
+    "Recovered":27
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 26.0000,64.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Finland",
+    "Last Update":"2020-03-11T13:33:10",
+    "Confirmed":59,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -8.2245,39.3999 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Portugal",
+    "Last Update":"2020-03-11T13:33:11",
+    "Confirmed":59,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.9925,15.8700 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Thailand",
+    "Last Update":"2020-03-11T09:13:10",
+    "Confirmed":59,
+    "Deaths":1,
+    "Recovered":34
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.9955,46.1512 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Slovenia",
+    "Last Update":"2020-03-11T14:13:11",
+    "Confirmed":57,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.7740,12.8797 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Philippines",
+    "Last Update":"2020-03-11T10:53:03",
+    "Confirmed":49,
+    "Deaths":1,
+    "Recovered":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.0000,23.7000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Taiwan*",
+    "Last Update":"2020-03-11T20:13:14",
+    "Confirmed":48,
+    "Deaths":1,
+    "Recovered":17
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 139.6380,35.4437 ]
+    },
+    "properties": {
+    "Province/State":"Diamond Princess",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":46,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 25.0000,46.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Romania",
+    "Last Update":"2020-03-11T21:13:18",
+    "Confirmed":45,
+    "Deaths":0,
+    "Recovered":6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -7.6921,53.1424 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Ireland",
+    "Last Update":"2020-03-11T21:33:03",
+    "Confirmed":43,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.3232,51.2538 ]
+    },
+    "properties": {
+    "Province/State":"Ontario",
+    "Country/Region":"Canada",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":41,
+    "Deaths":0,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -127.6476,53.7267 ]
+    },
+    "properties": {
+    "Province/State":"British Columbia",
+    "Country/Region":"Canada",
+    "Last Update":"2020-03-11T02:18:28",
+    "Confirmed":39,
+    "Deaths":1,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -51.9253,-14.2350 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Brazil",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":38,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 108.0000,16.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Vietnam",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":38,
+    "Deaths":0,
+    "Recovered":16
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 113.9213,-0.7893 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Indonesia",
+    "Last Update":"2020-03-11T11:14:26",
+    "Confirmed":34,
+    "Deaths":1,
+    "Recovered":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.3111,39.0598 ]
+    },
+    "properties": {
+    "Province/State":"Colorado",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":34,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.1451,51.9194 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Poland",
+    "Last Update":"2020-03-11T21:13:21",
+    "Confirmed":31,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.6868,27.7663 ]
+    },
+    "properties": {
+    "Province/State":"Florida",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T03:33:05",
+    "Confirmed":28,
+    "Deaths":2,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.9861,40.3495 ]
+    },
+    "properties": {
+    "Province/State":"Illinois",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":25,
+    "Deaths":0,
+    "Recovered":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 43.3569,42.3154 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Georgia",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":24,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.5430,-35.6751 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Chile",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":23,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.6431,33.0406 ]
+    },
+    "properties": {
+    "Province/State":"Georgia",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":23,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.5210,40.2989 ]
+    },
+    "properties": {
+    "Province/State":"New Jersey",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":23,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9631,-37.8136 ]
+    },
+    "properties": {
+    "Province/State":"Victoria",
+    "Country/Region":"Australia",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":21,
+    "Deaths":0,
+    "Recovered":7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 45.0000,24.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Saudi Arabia",
+    "Last Update":"2020-03-11T13:33:11",
+    "Confirmed":21,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.6655,37.6489 ]
+    },
+    "properties": {
+    "Province/State":"Grand Princess",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":21,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.5635,31.0545 ]
+    },
+    "properties": {
+    "Province/State":"Texas",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":21,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 1.6596,28.0339 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Algeria",
+    "Last Update":"2020-03-09T10:13:06",
+    "Confirmed":20,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 153.4000,-28.0167 ]
+    },
+    "properties": {
+    "Province/State":"Queensland",
+    "Country/Region":"Australia",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":20,
+    "Deaths":0,
+    "Recovered":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 90.0000,60.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Russia",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":20,
+    "Deaths":0,
+    "Recovered":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -63.6167,-38.4161 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Argentina",
+    "Last Update":"2020-03-11T02:18:16",
+    "Confirmed":19,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.5765,53.9333 ]
+    },
+    "properties": {
+    "Province/State":"Alberta",
+    "Country/Region":"Canada",
+    "Last Update":"2020-03-11T23:13:07",
+    "Confirmed":19,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 15.5000,45.1667 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Croatia",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":19,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 69.3451,30.3753 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Pakistan",
+    "Last Update":"2020-03-11T21:13:23",
+    "Confirmed":19,
+    "Deaths":0,
+    "Recovered":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.0709,44.5720 ]
+    },
+    "properties": {
+    "Province/State":"Oregon",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":19,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 95.9956,35.7452 ]
+    },
+    "properties": {
+    "Province/State":"Qinghai",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":18,
+    "Deaths":0,
+    "Recovered":18
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 57.0000,21.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Oman",
+    "Last Update":"2020-03-10T08:33:02",
+    "Confirmed":18,
+    "Deaths":0,
+    "Recovered":9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.1834,-1.8312 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Ecuador",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":17,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 25.0136,58.5953 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Estonia",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":16,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.2098,40.5908 ]
+    },
+    "properties": {
+    "Province/State":"Pennsylvania",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":16,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.7534,9.7489 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Costa Rica",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":13,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.5033,47.1625 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Hungary",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":13,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 22.9375,-30.5595 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"South Africa",
+    "Last Update":"2020-03-11T10:33:03",
+    "Confirmed":13,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.2105,42.0115 ]
+    },
+    "properties": {
+    "Province/State":"Iowa",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T02:53:03",
+    "Confirmed":13,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 20.1683,41.1533 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Albania",
+    "Last Update":"2020-03-11T13:33:11",
+    "Confirmed":12,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.0059,44.0165 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Serbia",
+    "Last Update":"2020-03-11T09:53:03",
+    "Confirmed":12,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 47.5769,40.1431 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Azerbaijan",
+    "Last Update":"2020-03-11T08:13:09",
+    "Confirmed":11,
+    "Deaths":0,
+    "Recovered":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 114.7277,4.5353 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Brunei",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":11,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.0152,-9.1900 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Peru",
+    "Last Update":"2020-03-10T16:33:13",
+    "Confirmed":11,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.2583,39.8494 ]
+    },
+    "properties": {
+    "Province/State":"Indiana",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":11,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 113.5500,22.1667 ]
+    },
+    "properties": {
+    "Province/State":"Macau",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":10,
+    "Deaths":0,
+    "Recovered":10
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 24.6032,56.8796 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Latvia",
+    "Last Update":"2020-03-11T13:53:24",
+    "Confirmed":10,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.6990,48.6690 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Slovakia",
+    "Last Update":"2020-03-11T13:33:11",
+    "Confirmed":10,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.0268,38.8974 ]
+    },
+    "properties": {
+    "Province/State":"District of Columbia",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":10,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.9450,33.8569 ]
+    },
+    "properties": {
+    "Province/State":"South Carolina",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":10,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 138.6007,-34.9285 ]
+    },
+    "properties": {
+    "Province/State":"South Australia",
+    "Country/Region":"Australia",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":9,
+    "Deaths":0,
+    "Recovered":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 115.8605,-31.9505 ]
+    },
+    "properties": {
+    "Province/State":"Western Australia",
+    "Country/Region":"Australia",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":9,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.9534,53.7098 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Belarus",
+    "Last Update":"2020-03-10T16:13:27",
+    "Confirmed":9,
+    "Deaths":0,
+    "Recovered":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.2973,4.5709 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Colombia",
+    "Last Update":"2020-03-11T14:33:04",
+    "Confirmed":9,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.4312,33.7298 ]
+    },
+    "properties": {
+    "Province/State":"Arizona",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":9,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.8021,39.0639 ]
+    },
+    "properties": {
+    "Province/State":"Maryland",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T03:33:05",
+    "Confirmed":9,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.6923,35.7478 ]
+    },
+    "properties": {
+    "Province/State":"Tennessee",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":9,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.1700,37.7693 ]
+    },
+    "properties": {
+    "Province/State":"Virginia",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T03:33:05",
+    "Confirmed":9,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.5491,52.9399 ]
+    },
+    "properties": {
+    "Province/State":"Quebec",
+    "Country/Region":"Canada",
+    "Last Update":"2020-03-11T23:13:06",
+    "Confirmed":8,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.2207,3.2028 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Maldives",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":8,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.0000,23.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Mexico",
+    "Last Update":"2020-03-11T21:13:24",
+    "Confirmed":8,
+    "Deaths":0,
+    "Recovered":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.7821,8.5380 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Panama",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":8,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.6701,37.6681 ]
+    },
+    "properties": {
+    "Province/State":"Kentucky",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T03:13:08",
+    "Confirmed":8,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.4388,44.2998 ]
+    },
+    "properties": {
+    "Province/State":"South Dakota",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":8,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 65.0000,33.0000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Afghanistan",
+    "Last Update":"2020-03-11T10:13:12",
+    "Confirmed":7,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 17.6791,43.9159 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Bosnia and Herzegovina",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":7,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 25.4858,42.7339 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Bulgaria",
+    "Last Update":"2020-03-11T22:13:12",
+    "Confirmed":7,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.1317,49.8144 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Luxembourg",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":7,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.7453,41.6086 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"North Macedonia",
+    "Last Update":"2020-03-10T10:53:03",
+    "Confirmed":7,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.5375,33.8869 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Tunisia",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":7,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.0554,38.3135 ]
+    },
+    "properties": {
+    "Province/State":"Nevada",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":7,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.8064,35.6301 ]
+    },
+    "properties": {
+    "Province/State":"North Carolina",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":7,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 33.4299,35.1264 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Cyprus",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":6,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.3754,35.9375 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Malta",
+    "Last Update":"2020-03-11T11:33:08",
+    "Confirmed":6,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.8678,31.1695 ]
+    },
+    "properties": {
+    "Province/State":"Louisiana",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T10:13:20",
+    "Confirmed":6,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.6165,44.2685 ]
+    },
+    "properties": {
+    "Province/State":"Wisconsin",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T22:53:03",
+    "Confirmed":6,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.1627,18.7357 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Dominican Republic",
+    "Last Update":"2020-03-08T17:23:08",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -53.1258,3.9339 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"French Guiana",
+    "Last Update":"2020-03-07T03:23:05",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -7.0926,31.7917 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Morocco",
+    "Last Update":"2020-03-11T11:53:03",
+    "Confirmed":5,
+    "Deaths":1,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 174.8860,-40.9006 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"New Zealand",
+    "Last Update":"2020-03-07T02:03:29",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -58.4438,-23.4425 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Paraguay",
+    "Last Update":"2020-03-11T04:33:03",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.9002,45.6945 ]
+    },
+    "properties": {
+    "Province/State":"Minnesota",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T19:13:18",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.2681,41.1254 ]
+    },
+    "properties": {
+    "Province/State":"Nebraska",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T23:13:07",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.5639,43.4525 ]
+    },
+    "properties": {
+    "Province/State":"New Hampshire",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T10:13:20",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.5118,41.6809 ]
+    },
+    "properties": {
+    "Province/State":"Rhode Island",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T03:13:08",
+    "Confirmed":5,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -14.4524,14.4974 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Senegal",
+    "Last Update":"2020-03-08T20:23:08",
+    "Confirmed":4,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.7649,40.3888 ]
+    },
+    "properties": {
+    "Province/State":"Ohio",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":4,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 145.9707,-41.4545 ]
+    },
+    "properties": {
+    "Province/State":"Tasmania",
+    "Country/Region":"Australia",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 90.3563,23.6850 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Bangladesh",
+    "Last Update":"2020-03-10T06:19:32",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 104.9910,12.5657 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Cambodia",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 23.8813,55.1694 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Lithuania",
+    "Last Update":"2020-03-11T02:18:26",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -61.0242,14.6415 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Martinique",
+    "Last Update":"2020-03-11T02:18:29",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 28.3699,47.4116 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Moldova",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.7554,41.5978 ]
+    },
+    "properties": {
+    "Province/State":"Connecticut",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T23:13:06",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.2485,34.8405 ]
+    },
+    "properties": {
+    "Province/State":"New Mexico",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.8624,40.1500 ]
+    },
+    "properties": {
+    "Province/State":"Utah",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T23:13:06",
+    "Confirmed":3,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -63.5887,-16.2902 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Bolivia",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.5616,12.2383 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Burkina Faso",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 11.5021,3.8480 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Cameroon",
+    "Last Update":"2020-03-08T05:23:03",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.9118,61.8926 ]
+    },
+    "properties": {
+    "Province/State":"Faroe Islands",
+    "Country/Region":"Denmark",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -63.0501,18.0708 ]
+    },
+    "properties": {
+    "Province/State":"St Martin",
+    "Country/Region":"France",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.2419,15.2000 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Honduras",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.6753,9.0820 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Nigeria",
+    "Last Update":"2020-03-09T09:43:03",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 80.7718,7.8731 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Sri Lanka",
+    "Last Update":"2020-03-11T09:33:12",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -157.4983,21.0943 ]
+    },
+    "properties": {
+    "Province/State":"Hawaii",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T03:13:17",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.5361,43.3266 ]
+    },
+    "properties": {
+    "Province/State":"Michigan",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T03:33:05",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.9289,35.5653 ]
+    },
+    "properties": {
+    "Province/State":"Oklahoma",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T17:13:25",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -2.3644,49.3723 ]
+    },
+    "properties": {
+    "Province/State":"Channel Islands",
+    "Country/Region":"United Kingdom",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":2,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 1.5218,42.5063 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Andorra",
+    "Last Update":"2020-03-02T20:23:16",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 45.0382,40.0691 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Armenia",
+    "Last Update":"2020-03-01T19:53:02",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 130.8456,-12.4634 ]
+    },
+    "properties": {
+    "Province/State":"Northern Territory",
+    "Country/Region":"Australia",
+    "Last Update":"2020-03-10T14:13:14",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 90.4336,27.5142 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Bhutan",
+    "Last Update":"2020-03-06T15:43:02",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -66.4619,46.5653 ]
+    },
+    "properties": {
+    "Province/State":"New Brunswick",
+    "Country/Region":"Canada",
+    "Last Update":"2020-03-11T23:13:06",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 88.0924,31.6927 ]
+    },
+    "properties": {
+    "Province/State":"Tibet",
+    "Country/Region":"China",
+    "Last Update":"2020-03-11T02:18:14",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.7587,-4.0383 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Congo (Kinshasa)",
+    "Last Update":"2020-03-11T21:13:24",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -5.5471,7.5400 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Cote d'Ivoire",
+    "Last Update":"2020-03-11T23:33:03",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -62.8333,17.9000 ]
+    },
+    "properties": {
+    "Province/State":"Saint Barthelemy",
+    "Country/Region":"France",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 12.4534,41.9029 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Holy See",
+    "Last Update":"2020-03-10T19:13:21",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.2975,18.1096 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Jamaica",
+    "Last Update":"2020-03-11T18:52:03",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 36.5100,31.2400 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Jordan",
+    "Last Update":"2020-03-03T15:33:02",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.5500,47.1400 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Liechtenstein",
+    "Last Update":"2020-03-04T01:33:07",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 7.4167,43.7333 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Monaco",
+    "Last Update":"2020-02-29T00:33:01",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8467,46.8625 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Mongolia",
+    "Last Update":"2020-03-10T06:13:43",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 84.1240,28.3949 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Nepal",
+    "Last Update":"2020-03-10T08:33:03",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 55.5364,-21.1151 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Reunion",
+    "Last Update":"2020-03-11T23:13:07",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 0.8248,8.6195 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Togo",
+    "Last Update":"2020-03-07T02:13:09",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.2433,38.9637 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Turkey",
+    "Last Update":"2020-03-11T03:33:05",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.3731,34.9697 ]
+    },
+    "properties": {
+    "Province/State":"Arkansas",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T18:52:04",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.5071,39.3185 ]
+    },
+    "properties": {
+    "Province/State":"Delaware",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T23:13:06",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7265,38.5266 ]
+    },
+    "properties": {
+    "Province/State":"Kansas",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T03:13:17",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.2884,38.4561 ]
+    },
+    "properties": {
+    "Province/State":"Missouri",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T03:13:17",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.4544,46.9219 ]
+    },
+    "properties": {
+    "Province/State":"Montana",
+    "Country/Region":"US",
+    "Last Update":"2020-03-11T23:13:06",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.7107,44.0459 ]
+    },
+    "properties": {
+    "Province/State":"Vermont",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T03:13:17",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 31.1656,48.3794 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"Ukraine",
+    "Last Update":"2020-03-03T15:33:02",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -5.3536,36.1408 ]
+    },
+    "properties": {
+    "Province/State":"Gibraltar",
+    "Country/Region":"United Kingdom",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":1,
+    "Deaths":0,
+    "Recovered":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 139.6380,35.4437 ]
+    },
+    "properties": {
+    "Province/State":"From Diamond Princess",
+    "Country/Region":"Australia",
+    "Last Update":"2020-02-29T02:03:10",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 103.8343,36.0611 ]
+    },
+    "properties": {
+    "Province/State":"Gansu",
+    "Country/Region":"Mainland China",
+    "Last Update":"2020-03-11T02:18:28",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 114.5149,38.0428 ]
+    },
+    "properties": {
+    "Province/State":"Hebei",
+    "Country/Region":"Mainland China",
+    "Last Update":"2020-03-11T02:18:29",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -152.4044,61.3707 ]
+    },
+    "properties": {
+    "Province/State":"Alaska",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.4788,44.2405 ]
+    },
+    "properties": {
+    "Province/State":"Idaho",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.3819,44.6939 ]
+    },
+    "properties": {
+    "Province/State":"Maine",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.6787,32.7416 ]
+    },
+    "properties": {
+    "Province/State":"Mississippi",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.7840,47.5289 ]
+    },
+    "properties": {
+    "Province/State":"North Dakota",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.9545,38.4912 ]
+    },
+    "properties": {
+    "Province/State":"West Virginia",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.3025,42.7560 ]
+    },
+    "properties": {
+    "Province/State":"Wyoming",
+    "Country/Region":"US",
+    "Last Update":"2020-03-10T02:33:04",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.2332,31.9522 ]
+    },
+    "properties": {
+    "Province/State":"",
+    "Country/Region":"occupied Palestinian territory",
+    "Last Update":"2020-03-11T20:53:02",
+    "Confirmed":0,
+    "Deaths":0,
+    "Recovered":0
+    }
+  }
+]
+}
