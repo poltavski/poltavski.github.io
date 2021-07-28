@@ -207,10 +207,10 @@ $("#predict-button").click(async function(){
             enabled: false
         },
         series: [{
-            data: ser
+            data: series
         }],
         xaxis: {
-            categories: lab,
+            categories: labels,
         }
     }
     var chart_bar = new ApexCharts(
@@ -220,7 +220,7 @@ $("#predict-button").click(async function(){
     chart_bar.render();
 
     var options_circle = {
-        series: ser,
+        series: series,
         chart: {
             height: 350,
             type: 'radialBar',
@@ -241,7 +241,7 @@ $("#predict-button").click(async function(){
                 }
             }
         },
-        labels: lab,
+        labels: labels,
     };
     var chart_circle = new ApexCharts(
         document.querySelector(`#chart-${counter-1}`),
