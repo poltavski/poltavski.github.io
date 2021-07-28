@@ -107,19 +107,18 @@ $("#image-selector").change(function(){
 // script.src = 'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest';
 // document.head.appendChild(script);
 
-
 let model;
 async function loadModel(){
 
     // model=await tf.loadLayersModel('mobilenet/model.json');
     // model = await tf.loadLayersModel('model/model.json');
-    model = await tf.loadLayersModel('https://poltavski.github.io/multilabel/model/model.json');
+    model = await tf.loadLayersModel('https://poltavski.github.io/projects/multilabel/model/model.json');
     // model.summary();
 
     // $('.progress-bar').hide();
 }
 
-loadModel(); // $("#model-selector").val()
+loadModel();
 // $('.progress-bar').show();
 
 
@@ -127,7 +126,6 @@ var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
     $(".predictions").prepend(`
-<!--    <h4>Image ${counter/3}</h2>-->
     <div class="row text-center">
         <div class="col-4" id="chart-${counter-2}"></div>
         <div class="col-4" id="chart-${counter-1}"></div>
@@ -137,9 +135,7 @@ $("#predict-button").click(async function(){
     let $itemBig = $('.owl-item.big > div').clone();
 
     let image1 = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
-    // $('#cur-img').html(image1);
-    // image1.crossOrigin = "Anonymous";
-    // alert(image1);
+    // TODO: request Calorie Counter API for Image Bytes
     let tensor = preprocessImage(image1);
     let prediction = await model.predict(tensor).data();
     // alert(prediction);
@@ -152,17 +148,17 @@ $("#predict-button").click(async function(){
         });
     // alert(top10);
 
-    var lab = [];
-    var ser = [];
+    var labels = [];
+    var series = [];
 
-    var lab_rad = [];
-    var ser_rad = [];
-
-    top10.forEach(function(p){
-        lab_rad.push(p.className);
-        ser_rad.push(p.probability.toFixed(2)*100);
-        // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
-    });
+    // var lab_rad = [];
+    // var ser_rad = [];
+    //
+    // top10.forEach(function(p){
+    //     lab_rad.push(p.className);
+    //     ser_rad.push(p.probability.toFixed(2)*100);
+    //     // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
+    // });
 
     top5 = top10.sort(function(a,b){
         return b.probability-a.probability;
@@ -170,17 +166,17 @@ $("#predict-button").click(async function(){
 
     // $("#prediction-list").empty();
     top5.forEach(function(p){
-        lab.push(p.className);
-        ser.push(p.probability.toFixed(2)*100);
+        labels.push(p.className);
+        series.push(p.probability.toFixed(2)*100);
     });
-
-    var options = {
+    // Draw ApexCharts
+    var options_pie = {
         chart: {
             width: 400,
             type: 'donut',
         },
-        labels: lab,
-        series: ser,
+        labels: labels,
+        series: series,
         responsive: [{
             breakpoint: 400,
             options: {
@@ -194,7 +190,8 @@ $("#predict-button").click(async function(){
 
         }],
     }
-
+    var chart_pie = new ApexCharts(document.querySelector("#chart"), options_pie);
+    chart_pie.render();
 
     var options_bar = {
         chart: {
@@ -216,155 +213,44 @@ $("#predict-button").click(async function(){
             categories: lab,
         }
     }
-    $(`#chart-${counter-2}`).html($itemBig);
-
-    var chart = new ApexCharts(
-        document.querySelector(`#chart-${counter-1}`),
-        options
-    );
-
-    chart.render();
-
     var chart_bar = new ApexCharts(
         document.querySelector(`#chart-${counter}`),
         options_bar
     );
-
     chart_bar.render();
 
+    var options_circle = {
+        series: ser,
+        chart: {
+            height: 350,
+            type: 'radialBar',
+        },
+        plotOptions: {
+            radialBar: {
+                dataLabels: {
+                    name: {
+                        fontSize: '22px',
+                    },
+                    value: {
+                        fontSize: '16px',
+                    },
+                    total: {
+                        show: true,
+                        label: 'Average features',
+                    }
+                }
+            }
+        },
+        labels: lab,
+    };
+    var chart_circle = new ApexCharts(
+        document.querySelector(`#chart-${counter-1}`),
+        options_circle
+    );
+    chart_circle.render();
+    // Show element
+    $(`#chart-${counter-2}`).html($itemBig);
 });
-
-// $("#predict-your").click(async function(){
-//     counter +=3;
-//     $(".predictions").prepend(`<h4>Image ${counter/3}</h2><div class="row text-center">
-//     <div class="col-4" id="chart-${counter-2}"></div>
-//     <div class="col-4" id="chart-${counter-1}"></div>
-//     <div class="col-4" id="chart-${counter}"></div>
-// </div>`)
-//     let image= $('#selected-image').get(0);
-//     let tensor = preprocessImage(image);
-//     let prediction = await model.predict(tensor).data();
-//     let top10=Array.from(prediction)
-//                 .map(function(p,i){
-//     return {
-//         probability: p,
-//         className: FOOD_CLASSES[i]
-//     };
-//     });
-//
-//     var lab = [];
-//     var ser = [];
-//
-//     var lab_rad = [];
-//     var ser_rad = [];
-//
-//     top10.forEach(function(p){
-//         lab_rad.push(p.className);
-//         ser_rad.push(p.probability.toFixed(2)*100);
-//     });
-//
-//     top5 = top10.sort(function(a,b){
-//         return b.probability-a.probability;
-//     }).slice(0,5);
-//
-//     // $("#prediction-list").empty();
-//     top5.forEach(function(p){
-//         lab.push(p.className);
-//         ser.push(p.probability.toFixed(2)*100);
-//     });
-//
-//
-//     var options = {
-//         chart: {
-//             width: 400,
-//             type: 'donut',
-//         },
-//         labels: lab,
-//         series: ser,
-//         responsive: [{
-//             breakpoint: 400,
-//             options: {
-//                 chart: {
-//                     width: 200
-//                 },
-//                 legend: {
-//                     position: 'bottom'
-//                 }
-//             }
-//
-//         }],
-//     }
-//
-//     var options_rad = {
-//         chart: {
-//             height: 350,
-//             type: 'radar',
-//         },
-//         series: [{
-//             name: 'Food classification',
-//             data: ser_rad,
-//         }],
-//         responsive: [{
-//             breakpoint: 400,
-//             options: {
-//                 chart: {
-//                     width: 200
-//                 },
-//                 legend: {
-//                     position: 'bottom'
-//                 }
-//             }
-//         }],
-//         title: {
-//             text: 'Radar Food Chart'
-//         },
-//         labels: lab_rad
-//     }
-//
-//     var options_bar = {
-//         chart: {
-//             height: 250,
-//             type: 'bar',
-//         },
-//         plotOptions: {
-//             bar: {
-//                 horizontal: true,
-//             }
-//         },
-//         dataLabels: {
-//             enabled: false
-//         },
-//         series: [{
-//             data: ser
-//         }],
-//         xaxis: {
-//             categories: lab,
-//         }
-//     }
-//
-//     var chart = new ApexCharts(
-//         document.querySelector(`#chart-${counter-2}`),
-//         options
-//     );
-//
-//     chart.render();
-//
-//     var chart_rad = new ApexCharts(
-//         document.querySelector(`#chart-${counter-1}`),
-//         options_rad
-//     );
-//
-//     chart_rad.render();
-//
-//     var chart_bar = new ApexCharts(
-//         document.querySelector(`#chart-${counter}`),
-//         options_bar
-//     );
-//
-//     chart_bar.render();
-//
-// });
-
 
 function preprocessImage(image)
 {
