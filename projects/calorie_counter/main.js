@@ -134,9 +134,49 @@ $("#predict-button").click(async function(){
     );
     let $itemBig = $('.owl-item.big > div').clone();
 
-    let image1 = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
+    let image = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
+    let image_src = image.src
     // TODO: request Calorie Counter API for Image Bytes
-    let tensor = preprocessImage(image1);
+    var url = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/label/url?percentage=false?url=" + image_src
+    var food_classes = []
+    var food_preds = []
+    await fetch(url, {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        credentials: 'include', // include, *same-origin, omit
+    }).then((data) => {
+        console.log(data)
+        if (data.status === 200) {
+            data.json().then((jsonObj) => {
+                Object.entries(jsonObj).forEach((entry) => {
+                    const [key, value] = entry;
+                    food_classes.push(key)
+                    food_preds.push(value)
+                });
+                console.log(jsonObj)
+            });
+        }
+    });
+
+    await fetch(url, {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        credentials: 'include', // include, *same-origin, omit
+    }).then((data) => {
+        console.log(data)
+        if (data.status === 200) {
+            data.blob().then((buf) => {
+                console.log(buf)
+                var blob = new Blob( [ buf ], { type: "image/jpeg" } );
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL( blob );
+                $(`#chart-${counter-2}`).html(`<img src=${imageUrl}>`);
+            });
+        }
+    });
+
+
+    let tensor = preprocessImage(image);
     let prediction = await model.predict(tensor).data();
     // alert(prediction);
     let top10=Array.from(prediction)
@@ -175,8 +215,8 @@ $("#predict-button").click(async function(){
             width: 400,
             type: 'donut',
         },
-        labels: labels,
-        series: series,
+        labels: food_classes,
+        series: food_preds,
         responsive: [{
             breakpoint: 400,
             options: {
@@ -190,34 +230,8 @@ $("#predict-button").click(async function(){
 
         }],
     }
-    var chart_pie = new ApexCharts(document.querySelector("#chart"), options_pie);
+    var chart_pie = new ApexCharts(document.querySelector("#chart-${counter}"), options_pie);
     chart_pie.render();
-
-    var options_bar = {
-        chart: {
-            height: 250,
-            type: 'bar',
-        },
-        plotOptions: {
-            bar: {
-                horizontal: true,
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        series: [{
-            data: series
-        }],
-        xaxis: {
-            categories: labels,
-        }
-    }
-    var chart_bar = new ApexCharts(
-        document.querySelector(`#chart-${counter}`),
-        options_bar
-    );
-    chart_bar.render();
 
     var options_circle = {
         series: series,
@@ -249,7 +263,7 @@ $("#predict-button").click(async function(){
     );
     chart_circle.render();
     // Show element
-    $(`#chart-${counter-2}`).html($itemBig);
+
 });
 
 function preprocessImage(image)
