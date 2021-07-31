@@ -121,7 +121,7 @@ async function loadModel(){
 loadModel();
 // $('.progress-bar').show();
 
-
+var imageUrl;
 var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
@@ -170,9 +170,8 @@ $("#predict-button").click(async function(){
                 console.log(buf)
                 var blob = new Blob( [ buf ], { type: "image/jpeg" } );
                 var urlCreator = window.URL || window.webkitURL;
-                var imageUrl = urlCreator.createObjectURL( blob );
-                $(`#chart-${counter-2}`).html($itemBig);
-                $(`#chart-${counter-2}`).attr('src', imageUrl);
+                imageUrl = urlCreator.createObjectURL( blob );
+
             });
         }
     });
@@ -265,7 +264,8 @@ $("#predict-button").click(async function(){
     );
     chart_circle.render();
     // Show element
-
+    $(`#chart-${counter-2}`).html($itemBig);
+    $(`#chart-${counter-2}`).attr('src', imageUrl);
 });
 
 function preprocessImage(image)
