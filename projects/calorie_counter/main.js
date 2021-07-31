@@ -137,13 +137,14 @@ $("#predict-button").click(async function(){
     let image = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
     let image_src = image.src
     // TODO: request Calorie Counter API for Image Bytes
-    var url = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/label/url?percentage=false?url=" + image_src
+    var urlLabel = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/label/url?url=" + image_src+"&percentage=false"
+    var urlMask = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/mask/url?url=" + image_src
     var food_classes = []
     var food_preds = []
-    await fetch(url, {
+    await fetch(urlLabel, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
-        credentials: 'include', // include, *same-origin, omit
+        credentials: 'omit', // include, *same-origin, omit
     }).then((data) => {
         console.log(data)
         if (data.status === 200) {
@@ -158,10 +159,10 @@ $("#predict-button").click(async function(){
         }
     });
 
-    await fetch(url, {
+    await fetch(urlMask, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
-        credentials: 'include', // include, *same-origin, omit
+        credentials: 'omit', // include, *same-origin, omit
     }).then((data) => {
         console.log(data)
         if (data.status === 200) {
@@ -170,7 +171,8 @@ $("#predict-button").click(async function(){
                 var blob = new Blob( [ buf ], { type: "image/jpeg" } );
                 var urlCreator = window.URL || window.webkitURL;
                 var imageUrl = urlCreator.createObjectURL( blob );
-                $(`#chart-${counter-2}`).html(`<img src=${imageUrl}>`);
+                $(`#chart-${counter-2}`).html($itemBig);
+                $(`#chart-${counter-2}`).attr('src', imageUrl);
             });
         }
     });
