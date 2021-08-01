@@ -98,7 +98,6 @@ $("#image-selector").change(function(){
         $("#prediction-list").empty();
     }
     let file = $("#image-selector").prop('files')[0];
-    console.log(file);
     reader.readAsDataURL(file);
 });
 
@@ -146,7 +145,6 @@ $("#predict-button").click(async function(){
         mode: 'cors', // no-cors, *cors, same-origin
         credentials: 'omit', // include, *same-origin, omit
     }).then((data) => {
-        console.log(data)
         if (data.status === 200) {
             data.json().then((jsonObj) => {
                 Object.entries(jsonObj).forEach((entry) => {
@@ -154,7 +152,6 @@ $("#predict-button").click(async function(){
                     food_classes.push(key)
                     food_preds.push(value)
                 });
-                console.log(jsonObj)
             });
         }
     });
@@ -164,14 +161,12 @@ $("#predict-button").click(async function(){
         mode: 'cors', // no-cors, *cors, same-origin
         credentials: 'omit', // include, *same-origin, omit
     }).then((data) => {
-        console.log(data)
         if (data.status === 200) {
             data.blob().then((buf) => {
-                console.log(buf)
                 var blob = new Blob( [ buf ], { type: "image/jpeg" } );
                 var urlCreator = window.URL || window.webkitURL;
                 imageUrl = urlCreator.createObjectURL( blob );
-                $(`#chart-${counter-2}`).html(`<img src=${imageUrl}>`);
+                $(`#chart-${counter-2}`).html(`<img width="300px" src=${imageUrl}>`);
             });
         }
     });
@@ -213,7 +208,7 @@ $("#predict-button").click(async function(){
     // Draw ApexCharts
     var options_pie = {
         chart: {
-            width: 400,
+            width: 300,
             type: 'donut',
         },
         labels: food_classes,
@@ -237,7 +232,7 @@ $("#predict-button").click(async function(){
     var options_circle = {
         series: series,
         chart: {
-            height: 350,
+            height: 300,
             type: 'radialBar',
         },
         plotOptions: {

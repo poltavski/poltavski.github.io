@@ -264,8 +264,8 @@ div.polaroid {
   font-family: "Indie Flower";
 }
 
-.owl-carousel .owl-item.big div {!important;  transition: transform 0.7s; transform: scale(1.0, 1)}
-.owl-carousel .owl-item.medium div {!important;  transition: transform 0.5s; transform: scale(0.9, 1)}
+/*.owl-carousel .owl-item.big div {!important;  transition: transform 0.7s; transform: scale(1.0, 1)}*/
+.owl-carousel .owl-item.medium div {!important;  transition: transform 0.5s; transform: scale(0.93, 1)}
 
 div.image-container {
   text-align: center;
