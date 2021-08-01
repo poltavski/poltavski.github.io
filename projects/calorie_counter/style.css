@@ -26,6 +26,14 @@ img {
   /* align-self: center; */
   /* align-self: center; */
 }
+
+.food-slider{
+    min-height: 200px;
+    max-height: 300px;
+    min-width: 300px;
+    max-width: 400px;
+}
+
 .action{
   display:block;
   margin:100px auto;

@@ -227,11 +227,19 @@ h1, h2, h3, h4, h5,
     font-size: 3rem; } }
 
 div.polaroid {
+  min-height: 300px;
   max-width: 400px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 10px;
+  max-height: 500px;
+  /*background-color: white;*/
+  /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);*/
+  /*margin-bottom: 10px;*/
 }
+
+/*.food-slider{*/
+/*  min-height: 400px;*/
+/*  width: auto;*/
+/*  !*height: auto;*!*/
+/*}*/
 
 .alpr {
   display: block;

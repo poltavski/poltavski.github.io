@@ -131,7 +131,6 @@ $("#predict-button").click(async function(){
         <div class="col-4" id="chart-${counter}"></div>
     </div>`
     );
-    let $itemBig = $('.owl-item.big > div').clone();
 
     let image = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
     let image_src = image.src
