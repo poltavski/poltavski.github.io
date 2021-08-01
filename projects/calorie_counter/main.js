@@ -171,7 +171,7 @@ $("#predict-button").click(async function(){
                 var blob = new Blob( [ buf ], { type: "image/jpeg" } );
                 var urlCreator = window.URL || window.webkitURL;
                 imageUrl = urlCreator.createObjectURL( blob );
-
+                $(`#chart-${counter-2}`).html(`<img src=${imageUrl}>`);
             });
         }
     });
@@ -231,7 +231,7 @@ $("#predict-button").click(async function(){
 
         }],
     }
-    var chart_pie = new ApexCharts(document.querySelector("#chart-${counter}"), options_pie);
+    var chart_pie = new ApexCharts(document.querySelector(`#chart-${counter}`), options_pie);
     chart_pie.render();
 
     var options_circle = {
@@ -264,8 +264,8 @@ $("#predict-button").click(async function(){
     );
     chart_circle.render();
     // Show element
-    $(`#chart-${counter-2}`).html($itemBig);
-    $(`#chart-${counter-2}`).attr('src', imageUrl);
+    // $(`#chart-${counter-2}`).html($itemBig);
+    // $(`#chart-${counter-2}`).attr('src', imageUrl);
 });
 
 function preprocessImage(image)
