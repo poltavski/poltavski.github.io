@@ -281,7 +281,7 @@ $("#predict-button").click(async function () {
             formatter: function (val, opt) {
                 return opt.w.globals.labels[opt.dataPointIndex] + ":  " + Math.round(val) + "%"
             },
-            offsetX: 200,
+            offsetX: 170,
             dropShadow: {
                 enabled: true,
                 color: '#fff',
