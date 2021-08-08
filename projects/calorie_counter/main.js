@@ -291,7 +291,7 @@ $("#predict-button").click(async function () {
                 colors: ['#fff']
         },
         xaxis: {
-            categories: labels,
+            categories: food_classes,
         },
         yaxis: {
             labels: {
