@@ -242,11 +242,10 @@ $("#predict-button").click(async function () {
             width: 400,
             height: 300,
             type: 'bar',
-            legend: "top",
         },
         legend: {
             show: true,
-            position: 'top',
+            position: 'bottom',
             horizontalAlign: 'center',
             onItemClick: {
                 toggleDataSeries: true
@@ -288,20 +287,17 @@ $("#predict-button").click(async function () {
          },
         stroke: {
             width: 1,
-                colors: ['#fff']
+                colors: ['#000']
         },
         xaxis: {
             categories: food_classes,
+            min: 0,
+            max: 1,
         },
         yaxis: {
             labels: {
                 show: false
             }
-        },
-        title: {
-            text: 'Food items',
-                align: 'center',
-                floating: true
         },
         tooltip: {
             theme: 'dark',
