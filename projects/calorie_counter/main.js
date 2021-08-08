@@ -255,8 +255,10 @@ $("#predict-button").click(async function () {
                 highlightDataSeries: true
             },
         },
-        labels: food_classes,
-        series: food_preds,
+        // labels: food_classes,
+        series: [{
+            data:food_preds
+        }],
         plotOptions: {
             bar: {
                 barHeight: '100%',
