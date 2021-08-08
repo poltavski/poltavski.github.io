@@ -125,10 +125,10 @@ var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
     $(".predictions").prepend(`
-    <div class="row text-center">
-        <div class="col-4" id="chart-${counter-2}"></div>
-        <div class="col-4" id="chart-${counter-1}"></div>
-        <div class="col-4" id="chart-${counter}"></div>
+    <div class="row slide-three-item home-slider owl-carousel">
+        <div id="chart-${counter-2}"></div>
+        <div id="chart-${counter-1}"></div>
+        <div id="chart-${counter}"></div>
     </div>`
     );
 
@@ -165,7 +165,7 @@ $("#predict-button").click(async function(){
                 var blob = new Blob( [ buf ], { type: "image/jpeg" } );
                 var urlCreator = window.URL || window.webkitURL;
                 imageUrl = urlCreator.createObjectURL( blob );
-                $(`#chart-${counter-2}`).html(`<img width="300px" src=${imageUrl}>`);
+                $(`#chart-${counter-2}`).html(`<img width="600px" src=${imageUrl}>`);
             });
         }
     });
@@ -207,7 +207,7 @@ $("#predict-button").click(async function(){
     // Draw ApexCharts
     var options_pie = {
         chart: {
-            width: 300,
+            width: 600,
             type: 'donut',
         },
         expandOnClick: true,
@@ -232,9 +232,10 @@ $("#predict-button").click(async function(){
     var options_circle = {
         series: series,
         chart: {
-            height: 300,
+            height: 600,
             type: 'radialBar',
         },
+        expandOnClick: true,
         plotOptions: {
             radialBar: {
                 dataLabels: {
