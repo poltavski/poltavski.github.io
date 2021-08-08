@@ -274,14 +274,14 @@ $("#predict-button").click(async function () {
         // ],
         dataLabels: {
         enabled: true,
-            textAnchor: 'end',
+            textAnchor: 'start',
             style: {
             colors: ['#000']
             },
             formatter: function (val, opt) {
                 return opt.w.globals.labels[opt.dataPointIndex] + ":  " + Math.round(val) + "%"
             },
-            offsetX: 0,
+            offsetX: 200,
             dropShadow: {
                 enabled: true,
                 color: '#fff',
