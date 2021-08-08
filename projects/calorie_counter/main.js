@@ -126,13 +126,13 @@ $("#predict-button").click(async function () {
     counter += 3;
     $(".predictions").prepend(`
     <div class="row text-center">
-        <div class="col-4">
+        <div class="col-5">
             <div class="row">
                 <div class="col-12" id="chart-${counter - 2}">Food mask</div>
                 <div class="col-12" id="chart-${counter}">Food item</div>
             </div>
         </div>
-        <div class="col-8" id="chart-${counter - 1}">Nutritional value</div>
+        <div class="col-7" id="chart-${counter - 1}">Nutritional value</div>
     </div>`
     );
     $('.food-pred').slick({
@@ -197,7 +197,7 @@ $("#predict-button").click(async function () {
                 var blob = new Blob([buf], {type: "image/jpeg"});
                 var urlCreator = window.URL || window.webkitURL;
                 imageUrl = urlCreator.createObjectURL(blob);
-                $(`#chart-${counter - 2}`).html(`<img width="600px" src=${imageUrl}>`);
+                $(`#chart-${counter - 2}`).html(`<img width="400px" src=${imageUrl}>`);
             });
         }
     });
@@ -239,7 +239,8 @@ $("#predict-button").click(async function () {
     // Draw ApexCharts
     var options_pie = {
         chart: {
-            width: 300,
+            width: 400,
+            height: 400,
             type: 'donut',
             legend: "top",
         },
@@ -263,7 +264,8 @@ $("#predict-button").click(async function () {
     var options_circle = {
         series: series,
         chart: {
-            height: 600,
+            width: 600,
+            height: 800,
             type: 'radialBar',
         },
         legend: {
