@@ -126,15 +126,19 @@ $("#predict-button").click(async function(){
     counter +=3;
     $(".predictions").prepend(`
     <div class="row food-pred">
-        <div id="chart-${counter-2}"></div>
-        <div id="chart-${counter-1}"></div>
-        <div id="chart-${counter}"></div>
+        <div id="chart-${counter-2}">Food mask</div>
+        <div id="chart-${counter-1}">Nutritional value</div>
+        <div id="chart-${counter}">Food item</div>
     </div>`
     );
     $('.food-pred').slick({
         centerMode: true,
         centerPadding: '60px',
-        slidesToShow: 3,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 768,
