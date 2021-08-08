@@ -181,7 +181,7 @@ $("#predict-button").click(async function () {
                 Object.entries(jsonObj).forEach((entry) => {
                     const [key, value] = entry;
                     food_classes.push(key)
-                    food_preds.push(value)
+                    food_preds.push(value*100)
                 });
             });
         }
@@ -244,7 +244,7 @@ $("#predict-button").click(async function () {
             type: 'bar',
         },
         legend: {
-            show: true,
+            show: false,
             position: 'bottom',
             horizontalAlign: 'center',
             onItemClick: {
@@ -264,7 +264,8 @@ $("#predict-button").click(async function () {
                 distributed: true,
                 horizontal: true,
                 dataLabels: {
-                    position: 'bottom'
+                    position: 'bottom',
+                    show: false,
                 },
             }
         },
@@ -275,10 +276,10 @@ $("#predict-button").click(async function () {
         enabled: true,
             textAnchor: 'start',
             style: {
-            colors: ['#fff']
+            colors: ['#000']
             },
             formatter: function (val, opt) {
-                return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val
+                return opt.w.globals.labels[opt.dataPointIndex] + ":  " + Math.round(val) + "%"
             },
             offsetX: 0,
                 dropShadow: {
@@ -287,12 +288,12 @@ $("#predict-button").click(async function () {
          },
         stroke: {
             width: 1,
-                colors: ['#000']
+                colors: ['#fff']
         },
         xaxis: {
             categories: food_classes,
             min: 0,
-            max: 1,
+            max: 100,
         },
         yaxis: {
             labels: {
