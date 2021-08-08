@@ -136,7 +136,7 @@ $("#predict-button").click(async function(){
     let image_src = image.src
     // TODO: request Calorie Counter API for Image Bytes
     var urlLabel = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/label/url?url=" + image_src+"&percentage=false"
-    var urlMask = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/mask/url?url=" + image_src
+    var urlMask = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/mask/url?url=" + image_src+"&food_restriction=false"
     var food_classes = []
     var food_preds = []
     await fetch(urlLabel, {
@@ -195,12 +195,12 @@ $("#predict-button").click(async function(){
     //     // $("#prediction-list").append(`<li>${p.className}:${p.probability.toFixed(6)}</li>`);
     // });
 
-    top5 = top10.sort(function(a,b){
-        return b.probability-a.probability;
-    }).slice(0,5);
+    // top5 = top10.sort(function(a,b){
+    //     return b.probability-a.probability;
+    // }).slice(0,5);
 
     // $("#prediction-list").empty();
-    top5.forEach(function(p){
+    top10.forEach(function(p){
         labels.push(p.className);
         series.push(p.probability.toFixed(2)*100);
     });
@@ -210,16 +210,17 @@ $("#predict-button").click(async function(){
             width: 300,
             type: 'donut',
         },
+        expandOnClick: true,
         labels: food_classes,
         series: food_preds,
         responsive: [{
             breakpoint: 400,
             options: {
                 chart: {
-                    width: 200
+                    width: 400
                 },
                 legend: {
-                    position: 'bottom'
+                    position: 'top'
                 }
             }
 

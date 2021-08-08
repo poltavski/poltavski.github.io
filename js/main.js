@@ -186,7 +186,7 @@ jQuery(document).ready(function($) {
 			// var $itemBig = $('.owl-item.big').clone();
 			var $itemBigDesc = $('.owl-item.big > div > div > div').clone();
 
-			$('#predict-button').html($('<div>Identify food mask, class and properties</div>'));
+			$('#predict-button').html($('<div>Identify food mask, item and nutritional value</div>'));
 
 		});
 		$('.slide-three-item').owlCarousel({
