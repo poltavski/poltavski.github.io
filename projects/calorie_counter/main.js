@@ -274,7 +274,7 @@ $("#predict-button").click(async function () {
         // ],
         dataLabels: {
         enabled: true,
-            textAnchor: 'start',
+            textAnchor: 'end',
             style: {
             colors: ['#000']
             },
@@ -282,8 +282,9 @@ $("#predict-button").click(async function () {
                 return opt.w.globals.labels[opt.dataPointIndex] + ":  " + Math.round(val) + "%"
             },
             offsetX: 0,
-                dropShadow: {
-                enabled: true
+            dropShadow: {
+                enabled: true,
+                color: '#fff',
             }
          },
         stroke: {
