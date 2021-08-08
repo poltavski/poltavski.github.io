@@ -125,13 +125,37 @@ var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
     $(".predictions").prepend(`
-    <div class="row slide-three-item home-slider owl-carousel">
+    <div class="row food-pred">
         <div id="chart-${counter-2}"></div>
         <div id="chart-${counter-1}"></div>
         <div id="chart-${counter}"></div>
     </div>`
     );
-
+    $('.food-pred').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
     let image = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
     let image_src = image.src
     // TODO: request Calorie Counter API for Image Bytes
@@ -247,7 +271,7 @@ $("#predict-button").click(async function(){
                     },
                     total: {
                         show: true,
-                        label: 'Average features',
+                        label: 'Average value',
                     }
                 }
             }
