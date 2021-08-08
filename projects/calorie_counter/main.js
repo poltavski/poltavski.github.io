@@ -12,7 +12,6 @@ const FOOD_CLASSES = {
 };
 
 
-
 //
 // $(document).ready()
 // {
@@ -88,13 +87,13 @@ const FOOD_CLASSES = {
 // });
 // const TF = require('tfjs');
 
-$("#image-selector").change(function(){
+$("#image-selector").change(function () {
     let reader = new FileReader();
 
-    reader.onload = function(){
+    reader.onload = function () {
         // console.log(reader.result)
         let dataURL = reader.result;
-        $("#selected-image").attr("src",dataURL);
+        $("#selected-image").attr("src", dataURL);
         $("#prediction-list").empty();
     }
     let file = $("#image-selector").prop('files')[0];
@@ -107,7 +106,8 @@ $("#image-selector").change(function(){
 // document.head.appendChild(script);
 
 let model;
-async function loadModel(){
+
+async function loadModel() {
 
     // model=await tf.loadLayersModel('mobilenet/model.json');
     // model = await tf.loadLayersModel('model/model.json');
@@ -122,16 +122,17 @@ loadModel();
 
 var imageUrl;
 var counter = 0;
-$("#predict-button").click(async function(){
-    counter +=3;
+$("#predict-button").click(async function () {
+    counter += 3;
     $(".predictions").prepend(`
     <div class="row text-center">
-        <div class="col-4"></div>
+        <div class="col-4">
             <div class="row">
-                <div class="col-12" id="chart-${counter-2}">Food mask</div>
+                <div class="col-12" id="chart-${counter - 2}">Food mask</div>
                 <div class="col-12" id="chart-${counter}">Food item</div>
             </div>
-        <div class="col-8" id="chart-${counter-1}">Nutritional value</div>
+        </div>
+        <div class="col-8" id="chart-${counter - 1}">Nutritional value</div>
     </div>`
     );
     $('.food-pred').slick({
@@ -166,8 +167,8 @@ $("#predict-button").click(async function(){
     let image = ($('.owl-item.big > div > div > img').get(0)); //.find('.sl-img'))
     let image_src = image.src
     // TODO: request Calorie Counter API for Image Bytes
-    var urlLabel = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/label/url?url=" + image_src+"&percentage=false"
-    var urlMask = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/mask/url?url=" + image_src+"&food_restriction=false"
+    var urlLabel = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/label/url?url=" + image_src + "&percentage=false"
+    var urlMask = "https://cc-prod-dvzsqhul3a-lm.a.run.app/image/mask/url?url=" + image_src + "&food_restriction=false"
     var food_classes = []
     var food_preds = []
     await fetch(urlLabel, {
@@ -193,10 +194,10 @@ $("#predict-button").click(async function(){
     }).then((data) => {
         if (data.status === 200) {
             data.blob().then((buf) => {
-                var blob = new Blob( [ buf ], { type: "image/jpeg" } );
+                var blob = new Blob([buf], {type: "image/jpeg"});
                 var urlCreator = window.URL || window.webkitURL;
-                imageUrl = urlCreator.createObjectURL( blob );
-                $(`#chart-${counter-2}`).html(`<img width="600px" src=${imageUrl}>`);
+                imageUrl = urlCreator.createObjectURL(blob);
+                $(`#chart-${counter - 2}`).html(`<img width="600px" src=${imageUrl}>`);
             });
         }
     });
@@ -205,8 +206,8 @@ $("#predict-button").click(async function(){
     let tensor = preprocessImage(image);
     let prediction = await model.predict(tensor).data();
     // alert(prediction);
-    let top10=Array.from(prediction)
-        .map(function(p,i){
+    let top10 = Array.from(prediction)
+        .map(function (p, i) {
             return {
                 probability: p,
                 className: FOOD_CLASSES[i]
@@ -231,9 +232,9 @@ $("#predict-button").click(async function(){
     // }).slice(0,5);
 
     // $("#prediction-list").empty();
-    top10.forEach(function(p){
+    top10.forEach(function (p) {
         labels.push(p.className);
-        series.push(p.probability.toFixed(2)*100);
+        series.push(p.probability.toFixed(2) * 100);
     });
     // Draw ApexCharts
     var options_pie = {
@@ -242,10 +243,19 @@ $("#predict-button").click(async function(){
             type: 'donut',
             legend: "top",
         },
-        expandOnClick: true,
+        legend: {
+            show: true,
+            position: 'top',
+            horizontalAlign: 'left',
+            onItemClick: {
+                toggleDataSeries: true
+            },
+            onItemHover: {
+                highlightDataSeries: true
+            },
+        },
         labels: food_classes,
         series: food_preds,
-        legend: "top",
     }
     var chart_pie = new ApexCharts(document.querySelector(`#chart-${counter}`), options_pie);
     chart_pie.render();
@@ -256,7 +266,18 @@ $("#predict-button").click(async function(){
             height: 600,
             type: 'radialBar',
         },
-        expandOnClick: true,
+        legend: {
+            show: true,
+            position: 'top',
+            horizontalAlign: 'center',
+            onItemClick: {
+                toggleDataSeries: true
+            },
+            onItemHover: {
+                highlightDataSeries: true
+
+            },
+        },
         plotOptions: {
             radialBar: {
                 dataLabels: {
@@ -276,7 +297,7 @@ $("#predict-button").click(async function(){
         labels: labels,
     };
     var chart_circle = new ApexCharts(
-        document.querySelector(`#chart-${counter-1}`),
+        document.querySelector(`#chart-${counter - 1}`),
         options_circle
     );
     chart_circle.render();
@@ -285,14 +306,13 @@ $("#predict-button").click(async function(){
     // $(`#chart-${counter-2}`).attr('src', imageUrl);
 });
 
-function preprocessImage(image)
-{
-    let tensor=tf.browser.fromPixels(image)
-    .resizeNearestNeighbor([224,224])
-    .toFloat();//.sub(meanImageNetRGB)
-    let meanImageNetRGB= tf.tensor1d([51.072815, 51.072815, 51.072815]);
-    let STD = tf.tensor1d([108.75629,  92.98068,  85.61884]);
+function preprocessImage(image) {
+    let tensor = tf.browser.fromPixels(image)
+        .resizeNearestNeighbor([224, 224])
+        .toFloat();//.sub(meanImageNetRGB)
+    let meanImageNetRGB = tf.tensor1d([51.072815, 51.072815, 51.072815]);
+    let STD = tf.tensor1d([108.75629, 92.98068, 85.61884]);
     return tensor.sub(meanImageNetRGB)
-                .div(STD)
-                .expandDims();      
+        .div(STD)
+        .expandDims();
 }
