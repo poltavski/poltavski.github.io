@@ -125,10 +125,13 @@ var counter = 0;
 $("#predict-button").click(async function(){
     counter +=3;
     $(".predictions").prepend(`
-    <div class="row food-pred">
-        <div id="chart-${counter-2}">Food mask</div>
-        <div id="chart-${counter-1}">Nutritional value</div>
-        <div id="chart-${counter}">Food item</div>
+    <div class="row text-center">
+        <div class="col-4"></div>
+            <div class="row">
+                <div class="col-12" id="chart-${counter-2}">Food mask</div>
+                <div class="col-12" id="chart-${counter}">Food item</div>
+            </div>
+        <div class="col-8" id="chart-${counter-1}">Nutritional value</div>
     </div>`
     );
     $('.food-pred').slick({
@@ -235,24 +238,14 @@ $("#predict-button").click(async function(){
     // Draw ApexCharts
     var options_pie = {
         chart: {
-            width: 600,
+            width: 300,
             type: 'donut',
+            legend: "top",
         },
         expandOnClick: true,
         labels: food_classes,
         series: food_preds,
-        responsive: [{
-            breakpoint: 400,
-            options: {
-                chart: {
-                    width: 400
-                },
-                legend: {
-                    position: 'top'
-                }
-            }
-
-        }],
+        legend: "top",
     }
     var chart_pie = new ApexCharts(document.querySelector(`#chart-${counter}`), options_pie);
     chart_pie.render();
