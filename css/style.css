@@ -235,11 +235,9 @@ h1, h2, h3, h4, h5,
 /*  !*margin-bottom: 10px;*!*/
 /*}*/
 
-/*.food-slider{*/
-/*  min-height: 400px;*/
-/*  width: auto;*/
-/*  !*height: auto;*!*/
-/*}*/
+.food-slider{
+  max-width: 550px;
+}
 
 .alpr {
   display: block;
@@ -265,7 +263,6 @@ h1, h2, h3, h4, h5,
   height: 100%;
   min-height: 400px;
   max-height: 500px;
-  max-width: 550px;
   object-fit: cover;
 }
 
